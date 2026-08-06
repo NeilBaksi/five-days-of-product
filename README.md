@@ -17,7 +17,7 @@ overview, a frameworks reference, and one page per day of the course.
 
 ## Design
 
-MBS-inspired academic-corporate palette (deep royal blue + berry), authored in
+Academic-corporate palette (deep royal blue + berry), authored in
 OKLCH with neutrals tinted toward the brand hue. Light mode, editorial/Swiss layout,
 Philosopher + Mulish + JetBrains Mono. Design brief in
 [`.impeccable.md`](./.impeccable.md). WCAG 2.1 AA baseline throughout.

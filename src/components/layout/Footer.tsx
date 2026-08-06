@@ -46,7 +46,7 @@ export function Footer() {
         </div>
 
         <p className="mt-10 font-mono text-[0.7rem] uppercase tracking-[0.16em] text-muted">
-          © {new Date().getFullYear()} Five Days of Product · Melbourne Business School
+          © {new Date().getFullYear()} Five Days of Product · Neil Baksi
         </p>
       </div>
     </footer>

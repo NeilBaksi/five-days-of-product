@@ -22,7 +22,7 @@ export function Sidebar() {
 
       <div className="border-t border-rule px-6 py-4">
         <p className="font-mono text-[0.6rem] uppercase tracking-[0.16em] text-muted">
-          Melbourne Business School
+          By Neil Baksi
         </p>
       </div>
     </aside>

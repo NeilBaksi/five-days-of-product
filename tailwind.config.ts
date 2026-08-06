@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        // MBS-inspired academic-corporate palette.
+        // Academic-corporate palette.
         // Authored in OKLCH (perceptually uniform); neutrals tinted toward the
         // brand-blue hue (H≈262), chroma pulled down near white/black.
         // `<alpha-value>` placeholder lets Tailwind opacity modifiers (e.g.
