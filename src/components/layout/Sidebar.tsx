@@ -6,7 +6,7 @@ export function Sidebar() {
   return (
     <aside className="fixed inset-y-0 left-0 hidden w-[260px] flex-col border-r border-rule bg-surface md:flex">
       <div className="px-6 pt-8 pb-6">
-        <Link to="/" className="font-display text-xl font-black leading-tight text-ink">
+        <Link to="/" className="font-display text-xl font-bold leading-tight text-ink">
           Five Days
           <br />
           of Product

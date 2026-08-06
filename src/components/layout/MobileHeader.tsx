@@ -13,7 +13,7 @@ export function MobileHeader({ onOpen }: MobileHeaderProps) {
       style={{ paddingTop: 'env(safe-area-inset-top)' }}
     >
       <div className="flex items-center justify-between gap-4 px-5 py-3">
-        <Link to="/" className="font-display text-base font-black leading-tight text-ink">
+        <Link to="/" className="font-display text-base font-bold leading-tight text-ink">
           Five Days of Product
         </Link>
         <button

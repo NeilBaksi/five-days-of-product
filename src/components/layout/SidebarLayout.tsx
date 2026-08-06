@@ -5,6 +5,7 @@ import { Sidebar } from './Sidebar'
 import { MobileHeader } from './MobileHeader'
 import { MobileDrawer } from './MobileDrawer'
 import { Footer } from './Footer'
+import { DotPattern } from '../ui/DotPattern'
 
 interface SidebarLayoutProps {
   children: ReactNode
@@ -33,6 +34,10 @@ export function SidebarLayout({ children }: SidebarLayoutProps) {
 
   return (
     <>
+      {/* Decorative dot field — fixed behind everything, concentrated toward the
+          top so it textures the hero and fades out behind reading text. */}
+      <DotPattern className="fixed inset-0 -z-10 [mask-image:radial-gradient(130%_75%_at_50%_0%,white,transparent_72%)]" />
+
       <a
         href="#main"
         className="sr-only rounded-full bg-ink px-4 py-2 font-mono text-sm text-paper focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50"

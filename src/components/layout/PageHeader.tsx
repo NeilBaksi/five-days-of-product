@@ -57,7 +57,7 @@ export function PageHeader({ kicker, title, subtitle, badge, accent, meta }: Pag
           {kicker}
         </motion.p>
       )}
-      <motion.h1 variants={item} className="mt-3 text-display-xl font-black text-ink">
+      <motion.h1 variants={item} className="mt-3 text-display-xl font-bold text-ink">
         {title}
       </motion.h1>
       {subtitle && (

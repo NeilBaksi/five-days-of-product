@@ -26,7 +26,7 @@ export function Section({ id, index, kicker, title, intro, numeralClass, childre
           {index && (
             <div className="lg:col-span-3" aria-hidden>
               <span
-                className={`font-display text-6xl font-black leading-none sm:text-7xl ${numeralClass ?? 'text-brand/15'}`}
+                className={`font-display text-6xl font-bold leading-none sm:text-7xl ${numeralClass ?? 'text-brand/15'}`}
               >
                 {index}
               </span>
@@ -34,7 +34,7 @@ export function Section({ id, index, kicker, title, intro, numeralClass, childre
           )}
           <div className={index ? 'lg:col-span-9' : 'lg:col-span-12'}>
             {kicker && <p className="kicker">{kicker}</p>}
-            <h2 className="mt-3 text-display-lg font-black text-ink">{title}</h2>
+            <h2 className="mt-3 text-display-lg font-bold text-ink">{title}</h2>
             {intro && <p className="mt-4 max-w-prose text-base leading-relaxed text-ink-soft sm:text-lg">{intro}</p>}
           </div>
         </div>

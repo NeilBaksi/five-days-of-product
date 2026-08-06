@@ -51,7 +51,7 @@ export function MobileDrawer({ open, onClose }: MobileDrawerProps) {
             style={{ paddingTop: 'env(safe-area-inset-top)' }}
           >
             <div className="flex items-center justify-between px-5 pt-5 pb-4">
-              <span className="font-display text-lg font-black text-ink">Five Days of Product</span>
+              <span className="font-display text-lg font-bold text-ink">Five Days of Product</span>
               <button
                 type="button"
                 onClick={onClose}

@@ -32,8 +32,8 @@ export default {
         'green-wash': 'oklch(0.96 0.02 158 / <alpha-value>)', // ≈ #e7f3ec
       },
       fontFamily: {
-        display: ['"Source Serif 4"', 'Georgia', 'serif'],
-        body: ['Epilogue', 'system-ui', 'sans-serif'],
+        display: ['"Philosopher"', 'Georgia', 'serif'],
+        body: ['Mulish', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       fontSize: {
