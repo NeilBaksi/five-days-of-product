@@ -7,7 +7,6 @@ export function Frameworks() {
     <>
       <PageHeader
         kicker="Reference"
-        badge="Frameworks"
         title="Product frameworks"
         subtitle="The recurring models this course leans on. Each one is a lens — reach for the one that fits the question you’re trying to answer."
       />

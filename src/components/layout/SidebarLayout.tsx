@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom'
 import { Sidebar } from './Sidebar'
 import { MobileHeader } from './MobileHeader'
 import { MobileDrawer } from './MobileDrawer'
-import { Footer } from './Footer'
 import { DotPattern } from '../ui/DotPattern'
 
 interface SidebarLayoutProps {
@@ -50,10 +49,9 @@ export function SidebarLayout({ children }: SidebarLayoutProps) {
       <MobileDrawer open={drawerOpen} onClose={closeDrawer} />
 
       <div className="md:pl-[260px]">
-        <main id="main" className="mx-auto max-w-5xl px-5 sm:px-8">
+        <main id="main" className="mx-auto max-w-5xl px-5 pb-20 sm:px-8 sm:pb-24">
           {children}
         </main>
-        <Footer />
       </div>
     </>
   )

@@ -1,7 +1,4 @@
 import { motion } from 'framer-motion'
-import clsx from 'clsx'
-import type { DayAccent } from '../../types'
-import { ACCENTS } from '../../lib/accents'
 
 interface PageHeaderMeta {
   label: string
@@ -12,9 +9,6 @@ interface PageHeaderProps {
   kicker?: string
   title: string
   subtitle?: string
-  badge?: string
-  /** Optional per-day accent — tints the badge and its marker dot. */
-  accent?: DayAccent
   meta?: PageHeaderMeta[]
 }
 
@@ -30,9 +24,8 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE_OUT_EXPO } },
 }
 
-/** Per-page hero: badge pill, kicker, display title, subtitle, and meta row. Left-aligned. */
-export function PageHeader({ kicker, title, subtitle, badge, accent, meta }: PageHeaderProps) {
-  const a = accent ? ACCENTS[accent] : null
+/** Per-page hero: kicker, display title, subtitle, and meta row. Left-aligned. */
+export function PageHeader({ kicker, title, subtitle, meta }: PageHeaderProps) {
   return (
     <motion.header
       className="pt-14 pb-10 sm:pt-20 sm:pb-14"
@@ -40,20 +33,8 @@ export function PageHeader({ kicker, title, subtitle, badge, accent, meta }: Pag
       initial="hidden"
       animate="show"
     >
-      {badge && (
-        <motion.span
-          variants={item}
-          className={clsx(
-            'inline-flex items-center gap-2 rounded-full px-3 py-1 font-mono text-[0.65rem] uppercase tracking-[0.18em]',
-            a ? a.badge : 'bg-blue-wash text-brand',
-          )}
-        >
-          {a && <span className={clsx('h-1.5 w-1.5 rounded-full', a.dot)} aria-hidden />}
-          {badge}
-        </motion.span>
-      )}
       {kicker && (
-        <motion.p variants={item} className={clsx('kicker', badge && 'mt-4')}>
+        <motion.p variants={item} className="kicker">
           {kicker}
         </motion.p>
       )}

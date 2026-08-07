@@ -3,7 +3,6 @@ import { PageHeader, Section, Reveal, PrevNextPager } from '../components/layout
 import { LearningObjectives, KeyTakeaways, AttributionFooter } from '../components/ui'
 import { getDay } from '../data/days'
 import { NAV, DAY_COUNT } from '../data/nav'
-import { ACCENTS } from '../lib/accents'
 import { renderBlock } from './blocks'
 
 /** One data-driven template renders all five day pages. */
@@ -14,7 +13,6 @@ export function Day() {
 
   if (!day) return <Navigate to="/" replace />
 
-  const numeralClass = ACCENTS[day.accent].strong
   const prev =
     day.n === 1
       ? { to: '/frameworks', label: 'Frameworks' }
@@ -27,8 +25,6 @@ export function Day() {
   return (
     <>
       <PageHeader
-        badge={`Day 0${day.n}`}
-        accent={day.accent}
         kicker={`Day ${day.n} of ${DAY_COUNT}`}
         title={day.title}
         subtitle={day.subtitle}
@@ -47,7 +43,6 @@ export function Day() {
           kicker={section.kicker}
           title={section.heading}
           intro={section.intro}
-          numeralClass={numeralClass}
         >
           <div className="flex flex-col gap-8">
             {section.blocks.map((block, bi) => (
