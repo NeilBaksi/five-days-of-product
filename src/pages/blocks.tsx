@@ -1,5 +1,19 @@
 import type { ContentBlock } from '../types'
-import { Card, Callout, FrameworkTable, PullQuote, StepList, Placeholder } from '../components/ui'
+import {
+  Card,
+  Callout,
+  FrameworkTable,
+  PullQuote,
+  StepList,
+  Placeholder,
+  GoodBadList,
+  StoryCards,
+  Spectrum,
+  PressureDiagram,
+  Triad,
+  Formula,
+  DebateCallout,
+} from '../components/ui'
 
 /** Renders a single Day content block. Maps the ContentBlock union → UI components. */
 export function renderBlock(block: ContentBlock, key: number) {
@@ -37,6 +51,20 @@ export function renderBlock(block: ContentBlock, key: number) {
       return <StepList key={key} items={block.items} />
     case 'placeholder':
       return <Placeholder key={key} note={block.note} />
+    case 'goodbad':
+      return <GoodBadList key={key} items={block.items} />
+    case 'stories':
+      return <StoryCards key={key} items={block.items} />
+    case 'spectrum':
+      return <Spectrum key={key} stages={block.stages} />
+    case 'pressure':
+      return <PressureDiagram key={key} center={block.center} forces={block.forces} />
+    case 'triad':
+      return <Triad key={key} center={block.center} nodes={block.nodes} variant={block.variant} caption={block.caption} />
+    case 'formula':
+      return <Formula key={key} expression={block.expression} note={block.note} />
+    case 'debate':
+      return <DebateCallout key={key} left={block.left} right={block.right} resolution={block.resolution} />
     default:
       return null
   }

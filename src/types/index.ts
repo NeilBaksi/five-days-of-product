@@ -44,6 +44,17 @@ export interface Framework {
   usedOn?: string[]
 }
 
+/** One named product person behind a well-known product (Cagan, SVPG 2016). */
+export interface StoryItem {
+  name: string
+  product: string
+  year?: string
+  /** one-line teaser shown collapsed */
+  hook: string
+  /** fuller story shown expanded */
+  detail: string
+}
+
 /** Discriminated union of renderable content blocks inside a Day section. */
 export type ContentBlock =
   | { type: 'paragraph'; text: string }
@@ -53,6 +64,24 @@ export type ContentBlock =
   | { type: 'quote'; quote: string; attribution?: string }
   | { type: 'steps'; items: { title: string; body: string }[] }
   | { type: 'placeholder'; note?: string }
+  | { type: 'goodbad'; items: { good: string; bad: string }[] }
+  | { type: 'stories'; items: StoryItem[] }
+  | { type: 'spectrum'; stages: { label: string; note?: string }[] }
+  | { type: 'pressure'; center: string; forces: string[] }
+  | {
+      type: 'triad'
+      center: string
+      variant: 'venn' | 'balance'
+      nodes: { label: string; desc?: string }[]
+      caption?: string
+    }
+  | { type: 'formula'; expression: string; note?: string }
+  | {
+      type: 'debate'
+      left: { quote: string; attribution: string }
+      right: { quote: string; attribution: string }
+      resolution: string
+    }
 
 export interface DaySection {
   id: string
@@ -76,8 +105,14 @@ export interface DayContent {
   title: string
   subtitle: string
   accent: DayAccent
+  /** short syllabus theme chips, e.g. ["User research", "Product strategy"] */
+  themes: string[]
+  /** the syllabus "what it means for you" line — used by the landing roadmap */
+  promise: string
   meta: DayMeta[]
   objectives: string[]
   sections: DaySection[]
   takeaways: string[]
+  /** optional source citations rendered as an attribution footer */
+  sources?: { label: string; url: string }[]
 }

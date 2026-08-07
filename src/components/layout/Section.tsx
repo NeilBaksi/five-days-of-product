@@ -20,26 +20,23 @@ interface SectionProps {
  */
 export function Section({ id, index, kicker, title, intro, numeralClass, children }: SectionProps) {
   return (
-    <section id={id} className="scroll-mt-32 py-16 sm:py-20 lg:py-28 md:scroll-mt-24">
+    <section id={id} className="scroll-mt-24 py-12 sm:py-16">
       <Reveal>
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-10">
-          {index && (
-            <div className="lg:col-span-3" aria-hidden>
-              <span
-                className={`font-display text-6xl font-bold leading-none sm:text-7xl ${numeralClass ?? 'text-brand/15'}`}
-              >
+        {(index || kicker) && (
+          <p className="flex items-baseline gap-2">
+            {index && (
+              <span className={`font-display text-lg font-bold leading-none ${numeralClass ?? 'text-brand'}`}>
                 {index}
               </span>
-            </div>
-          )}
-          <div className={index ? 'lg:col-span-9' : 'lg:col-span-12'}>
-            {kicker && <p className="kicker">{kicker}</p>}
-            <h2 className="mt-3 text-display-lg font-bold text-ink">{title}</h2>
-            {intro && <p className="mt-4 max-w-prose text-base leading-relaxed text-ink-soft sm:text-lg">{intro}</p>}
-          </div>
-        </div>
+            )}
+            {index && kicker && <span className="text-muted/50" aria-hidden>·</span>}
+            {kicker && <span className="kicker">{kicker}</span>}
+          </p>
+        )}
+        <h2 className="mt-2 text-display-lg font-bold text-ink">{title}</h2>
+        {intro && <p className="mt-4 max-w-prose text-base leading-relaxed text-ink-soft sm:text-lg">{intro}</p>}
       </Reveal>
-      <div className={index ? 'mt-10 sm:mt-12 lg:mt-14 lg:pl-[25%]' : 'mt-10 sm:mt-12 lg:mt-14'}>{children}</div>
+      <div className="mt-8 sm:mt-10">{children}</div>
     </section>
   )
 }

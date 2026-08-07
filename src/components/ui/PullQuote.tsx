@@ -3,18 +3,15 @@ interface PullQuoteProps {
   attribution?: string
 }
 
-/** Large editorial pull quote, left-aligned, with a small decorative mark. */
+/** Quiet editorial pull quote — a restrained text-breaker, left-aligned. */
 export function PullQuote({ quote, attribution }: PullQuoteProps) {
   return (
-    <figure className="relative my-10 max-w-prose py-2">
-      <span aria-hidden className="absolute -left-1 -top-4 font-display text-6xl text-brand/20">
-        &ldquo;
-      </span>
-      <blockquote className="relative font-display text-2xl italic leading-snug text-ink sm:text-display-lg">
+    <figure className="relative my-6 max-w-prose border-l border-rule pl-5">
+      <blockquote className="font-display text-lg italic leading-relaxed text-ink sm:text-xl">
         {quote}
       </blockquote>
       {attribution && (
-        <figcaption className="mt-4 font-mono text-[0.75rem] uppercase tracking-wider text-muted">
+        <figcaption className="mt-3 font-mono text-[0.7rem] uppercase tracking-wider text-muted">
           — {attribution}
         </figcaption>
       )}

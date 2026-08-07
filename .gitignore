@@ -10,6 +10,9 @@ dist
 dist-ssr
 *.local
 
+# Local-only content tracking (never pushed)
+REMOVED_TOPICS.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

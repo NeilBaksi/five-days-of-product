@@ -1,6 +1,6 @@
 import { useParams, Navigate } from 'react-router-dom'
 import { PageHeader, Section, Reveal, PrevNextPager } from '../components/layout'
-import { LearningObjectives, KeyTakeaways } from '../components/ui'
+import { LearningObjectives, KeyTakeaways, AttributionFooter } from '../components/ui'
 import { getDay } from '../data/days'
 import { NAV, DAY_COUNT } from '../data/nav'
 import { ACCENTS } from '../lib/accents'
@@ -14,7 +14,7 @@ export function Day() {
 
   if (!day) return <Navigate to="/" replace />
 
-  const numeralClass = ACCENTS[day.accent].numeral
+  const numeralClass = ACCENTS[day.accent].strong
   const prev =
     day.n === 1
       ? { to: '/frameworks', label: 'Frameworks' }
@@ -43,7 +43,7 @@ export function Day() {
         <Section
           key={section.id}
           id={section.id}
-          index={`0${si + 1}`}
+          index={String(si + 1).padStart(2, '0')}
           kicker={section.kicker}
           title={section.heading}
           intro={section.intro}
@@ -62,6 +62,8 @@ export function Day() {
       <div className="my-16">
         <KeyTakeaways items={day.takeaways} />
       </div>
+
+      {day.sources && day.sources.length > 0 && <AttributionFooter sources={day.sources} />}
 
       <PrevNextPager prev={prev} next={next} />
     </>
