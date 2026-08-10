@@ -66,7 +66,11 @@ export type ContentBlock =
   | { type: 'placeholder'; note?: string }
   | { type: 'goodbad'; items: { good: string; bad: string }[] }
   | { type: 'stories'; items: StoryItem[] }
-  | { type: 'spectrum'; stages: { label: string; note?: string }[] }
+  | {
+      type: 'spectrum'
+      stages: { label: string; note?: string; icon?: 'block' | 'cart' | 'bicycle' | 'car' }[]
+      caption?: string
+    }
   | { type: 'pressure'; center: string; forces: string[] }
   | {
       type: 'triad'
@@ -82,6 +86,37 @@ export type ContentBlock =
       right: { quote: string; attribution: string }
       resolution: string
     }
+  | {
+      type: 'strategyStack'
+      topTier: { label: string }[]
+      support: string[]
+      center: string
+      nodes: { label: string; desc?: string }[]
+      caption?: string
+    }
+  | { type: 'wheel'; center: string; spokes: { label: string; desc?: string }[]; emphasisIndex?: number }
+  | {
+      type: 'opportunity'
+      xLabel: string
+      yLabel: string
+      dots: { x: number; y: number; label?: string; highlight?: boolean }[]
+      zoneLabel: string
+      caption?: string
+    }
+  | { type: 'persona'; name: string; jtbd: string; problems: string[] }
+  | {
+      type: 'matrix'
+      xLabel: string
+      yLabel: string
+      items: { label: string; value: 0 | 1 | 2; complexity: 0 | 1 | 2; highlight?: boolean }[]
+      zoneLabel?: string
+      caption?: string
+    }
+  | { type: 'kano'; caption?: string }
+  | { type: 'quoteBank'; items: { quote: string; attribution: string }[] }
+  | { type: 'moscow'; rings: { label: string; effort: string }[]; caption?: string }
+  | { type: 'ladder'; tiers: { label: string; meta: string; desc?: string }[]; caption?: string }
+  | { type: 'roadmapCycle'; steps: { label: string; note?: string }[]; caption?: string }
 
 export interface DaySection {
   id: string

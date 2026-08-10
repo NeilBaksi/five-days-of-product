@@ -50,11 +50,9 @@ export function Triad({ center, nodes, variant, caption }: TriadProps) {
         ))}
       </div>
 
-      {/* Accessible content: center label + full node labels/descriptions as real DOM text */}
-      <p className="mt-6 text-center font-mono text-[0.75rem] font-semibold uppercase tracking-widest text-ink">
-        {center}
-      </p>
-      <dl className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-3">
+      {/* Accessible content: center (screen-reader only, already visible in the hub) + full node labels/descriptions */}
+      <span className="sr-only">{center}</span>
+      <dl className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
         {nodes.map((node, i) => (
           <div key={i}>
             <dt className={clsx('font-display text-sm font-bold', ACCENT_CLASSES[i % ACCENT_CLASSES.length])}>

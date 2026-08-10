@@ -9,6 +9,8 @@ export function Frameworks() {
         kicker="Reference"
         title="Product frameworks"
         subtitle="The recurring models this course leans on. Each one is a lens — reach for the one that fits the question you’re trying to answer."
+        prev={{ to: '/', label: 'Overview' }}
+        next={{ to: '/day/1', label: 'Day 1 · Discovery' }}
       />
 
       <Section

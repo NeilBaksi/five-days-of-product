@@ -19,6 +19,8 @@ export function SidebarLayout({ children }: SidebarLayoutProps) {
 
   useEffect(() => {
     setDrawerOpen(false)
+    // Reset scroll on navigation (prev/next pager, sidebar links) so each page opens at the top.
+    window.scrollTo(0, 0)
   }, [location.pathname])
 
   const openDrawer = () => {

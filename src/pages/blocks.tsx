@@ -13,6 +13,16 @@ import {
   Triad,
   Formula,
   DebateCallout,
+  StrategyStack,
+  CompetencyWheel,
+  OpportunityChart,
+  PersonaCard,
+  PriorityMatrix,
+  KanoCurve,
+  QuoteBank,
+  MoscowRings,
+  ConcretenessLadder,
+  RoadmapCycle,
 } from '../components/ui'
 
 /** Renders a single Day content block. Maps the ContentBlock union → UI components. */
@@ -56,7 +66,7 @@ export function renderBlock(block: ContentBlock, key: number) {
     case 'stories':
       return <StoryCards key={key} items={block.items} />
     case 'spectrum':
-      return <Spectrum key={key} stages={block.stages} />
+      return <Spectrum key={key} stages={block.stages} caption={block.caption} />
     case 'pressure':
       return <PressureDiagram key={key} center={block.center} forces={block.forces} />
     case 'triad':
@@ -65,6 +75,55 @@ export function renderBlock(block: ContentBlock, key: number) {
       return <Formula key={key} expression={block.expression} note={block.note} />
     case 'debate':
       return <DebateCallout key={key} left={block.left} right={block.right} resolution={block.resolution} />
+    case 'strategyStack':
+      return (
+        <StrategyStack
+          key={key}
+          topTier={block.topTier}
+          support={block.support}
+          center={block.center}
+          nodes={block.nodes}
+          caption={block.caption}
+        />
+      )
+    case 'wheel':
+      return (
+        <CompetencyWheel key={key} center={block.center} spokes={block.spokes} emphasisIndex={block.emphasisIndex} />
+      )
+    case 'opportunity':
+      return (
+        <OpportunityChart
+          key={key}
+          xLabel={block.xLabel}
+          yLabel={block.yLabel}
+          dots={block.dots}
+          zoneLabel={block.zoneLabel}
+          caption={block.caption}
+        />
+      )
+    case 'persona':
+      return <PersonaCard key={key} name={block.name} jtbd={block.jtbd} problems={block.problems} />
+    case 'matrix':
+      return (
+        <PriorityMatrix
+          key={key}
+          xLabel={block.xLabel}
+          yLabel={block.yLabel}
+          items={block.items}
+          zoneLabel={block.zoneLabel}
+          caption={block.caption}
+        />
+      )
+    case 'kano':
+      return <KanoCurve key={key} caption={block.caption} />
+    case 'quoteBank':
+      return <QuoteBank key={key} items={block.items} />
+    case 'moscow':
+      return <MoscowRings key={key} rings={block.rings} caption={block.caption} />
+    case 'ladder':
+      return <ConcretenessLadder key={key} tiers={block.tiers} caption={block.caption} />
+    case 'roadmapCycle':
+      return <RoadmapCycle key={key} steps={block.steps} caption={block.caption} />
     default:
       return null
   }

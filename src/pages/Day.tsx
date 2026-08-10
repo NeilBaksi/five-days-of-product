@@ -29,6 +29,8 @@ export function Day() {
         title={day.title}
         subtitle={day.subtitle}
         meta={day.meta}
+        prev={prev}
+        next={next}
       />
 
       <div className="mb-16">

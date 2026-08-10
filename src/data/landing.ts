@@ -124,7 +124,8 @@ export const PULL_QUOTES: PullQuote[] = [
     attribution: 'Marty Cagan, SVPG',
   },
   {
-    quote: 'Good product managers define their job and their success. Bad product managers constantly want to be told what to do.',
+    quote:
+      'Good product managers err on the side of clarity vs. explaining the obvious. Bad product managers never explain the obvious.',
     attribution: 'Ben Horowitz, a16z',
   },
   {
