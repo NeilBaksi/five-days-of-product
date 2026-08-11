@@ -23,6 +23,8 @@ REMOVED_TOPICS.md
 # Playwright scrape artefacts
 .playwright-mcp
 *.png
+# ...but src/assets holds real imported source images — the build fails without them
+!src/assets/*.png
 
 # graphify — keep shareable artefacts (graph.json/html, GRAPH_REPORT.md, manifest.json),
 # ignore machine-local internals
