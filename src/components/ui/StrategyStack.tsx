@@ -6,6 +6,8 @@ interface StrategyStackProps {
   center: string
   nodes: { label: string; desc?: string }[]
   caption?: string
+  vennImage?: string
+  vennImageAlt?: string
 }
 
 const ACCENT_CLASSES = ['text-brand', 'text-berry', 'text-green']
@@ -41,7 +43,15 @@ const CIRCLE_LABEL_POS = [
 const HUB_R = 37
 
 /** Two-tier strategy diagram: org-level decisions feeding a 3-circle venn of product-level decisions. */
-export function StrategyStack({ topTier, support, center, nodes, caption }: StrategyStackProps) {
+export function StrategyStack({
+  topTier,
+  support,
+  center,
+  nodes,
+  caption,
+  vennImage,
+  vennImageAlt,
+}: StrategyStackProps) {
   return (
     <div>
       <p className="font-mono text-[0.7rem] font-semibold uppercase tracking-widest text-muted">
@@ -66,47 +76,55 @@ export function StrategyStack({ topTier, support, center, nodes, caption }: Stra
         <path d="M12 18 L20 26 L28 18" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
 
-      <div className="relative mx-auto mt-2 w-full max-w-sm">
-        <svg aria-hidden viewBox="0 0 290 290" className="mx-auto w-full max-w-sm">
-          {/* Three washed circles (drawn first so labels + hub sit on top) */}
-          {CIRCLES.map((c, i) => (
-            <circle
-              key={i}
-              cx={c.cx}
-              cy={c.cy}
-              r={R_CIRCLE}
-              className={clsx(WASH_FILLS[i % WASH_FILLS.length], 'stroke-rule')}
-              strokeWidth="1.5"
-            />
-          ))}
+      {vennImage ? (
+        <div className="relative mx-auto mt-2 w-full max-w-sm">
+          <img src={vennImage} alt={vennImageAlt ?? center} className="mx-auto w-full max-w-sm" />
+        </div>
+      ) : (
+        <div className="relative mx-auto mt-2 w-full max-w-sm">
+          <svg aria-hidden viewBox="0 0 290 290" className="mx-auto w-full max-w-sm">
+            {/* Three washed circles (drawn first so labels + hub sit on top) */}
+            {CIRCLES.map((c, i) => (
+              <circle
+                key={i}
+                cx={c.cx}
+                cy={c.cy}
+                r={R_CIRCLE}
+                className={clsx(WASH_FILLS[i % WASH_FILLS.length], 'stroke-rule')}
+                strokeWidth="1.5"
+              />
+            ))}
 
-          {/* Node label + description, seated in each circle's outer lobe */}
-          {CIRCLE_LABEL_POS.map((pos, i) => {
-            const node = nodes[i]
-            if (!node) return null
-            return (
-              <foreignObject key={i} x={pos.x - 58} y={pos.y - 42} width={116} height={84}>
-                <div className="flex h-full w-full flex-col items-center justify-center gap-0.5 px-1 text-center">
-                  <p className={clsx('font-display text-base font-bold', ACCENT_CLASSES[i % ACCENT_CLASSES.length])}>
-                    {node.label}
-                  </p>
-                  {node.desc && <p className="text-[0.7rem] leading-tight text-ink-soft">{node.desc}</p>}
-                </div>
-              </foreignObject>
-            )
-          })}
+            {/* Node label + description, seated in each circle's outer lobe */}
+            {CIRCLE_LABEL_POS.map((pos, i) => {
+              const node = nodes[i]
+              if (!node) return null
+              return (
+                <foreignObject key={i} x={pos.x - 58} y={pos.y - 42} width={116} height={84}>
+                  <div className="flex h-full w-full flex-col items-center justify-center gap-0.5 px-1 text-center">
+                    <p
+                      className={clsx('font-display text-base font-bold', ACCENT_CLASSES[i % ACCENT_CLASSES.length])}
+                    >
+                      {node.label}
+                    </p>
+                    {node.desc && <p className="text-[0.7rem] leading-tight text-ink-soft">{node.desc}</p>}
+                  </div>
+                </foreignObject>
+              )
+            })}
 
-          {/* Hub at the centroid = true triple-intersection */}
-          <circle cx={CX} cy={CY} r={HUB_R} className="fill-brand" />
-          <foreignObject x={CX - HUB_R} y={CY - HUB_R} width={HUB_R * 2} height={HUB_R * 2}>
-            <div className="flex h-full w-full items-center justify-center p-1 text-center">
-              <span className="font-mono text-[0.6rem] font-semibold uppercase leading-tight tracking-widest text-paper">
-                {center}
-              </span>
-            </div>
-          </foreignObject>
-        </svg>
-      </div>
+            {/* Hub at the centroid = true triple-intersection */}
+            <circle cx={CX} cy={CY} r={HUB_R} className="fill-brand" />
+            <foreignObject x={CX - HUB_R} y={CY - HUB_R} width={HUB_R * 2} height={HUB_R * 2}>
+              <div className="flex h-full w-full items-center justify-center p-1 text-center">
+                <span className="font-mono text-[0.6rem] font-semibold uppercase leading-tight tracking-widest text-paper">
+                  {center}
+                </span>
+              </div>
+            </foreignObject>
+          </svg>
+        </div>
+      )}
 
       {/* Accessible fallback: real text for screen readers, hidden visually */}
       <dl className="sr-only">

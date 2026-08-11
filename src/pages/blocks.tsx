@@ -34,6 +34,19 @@ export function renderBlock(block: ContentBlock, key: number) {
           {block.text}
         </p>
       )
+    case 'subheading':
+      return (
+        <h3 key={key} className="font-display text-xl font-bold text-ink">
+          {block.text}
+        </h3>
+      )
+    case 'image':
+      return (
+        <figure key={key} className="mx-auto w-full max-w-xl">
+          <img src={block.src} alt={block.alt} className="w-full h-auto rounded-2xl" />
+          {block.caption && <figcaption className="mt-3 text-sm text-muted">{block.caption}</figcaption>}
+        </figure>
+      )
     case 'cards':
       return (
         <div key={key} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -84,6 +97,8 @@ export function renderBlock(block: ContentBlock, key: number) {
           center={block.center}
           nodes={block.nodes}
           caption={block.caption}
+          vennImage={block.vennImage}
+          vennImageAlt={block.vennImageAlt}
         />
       )
     case 'wheel':

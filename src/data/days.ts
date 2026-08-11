@@ -1,4 +1,6 @@
 import type { DayContent } from '../types'
+import productFlywheel from '../assets/product-flywheel.png'
+import productLevelDecisions from '../assets/product-level-decisions.png'
 
 // PLACEHOLDER content for all five days. Structure is final; prose is dummy.
 // Real lecture content replaces the block arrays in later prompts — the section
@@ -218,6 +220,8 @@ export const DAYS: DayContent[] = [
               { label: 'Viability', desc: 'Does it work commercially for us? (business)' },
               { label: 'Feasibility', desc: 'Can we build and support it? (technology + people)' },
             ],
+            vennImage: productLevelDecisions,
+            vennImageAlt: 'Venn diagram of desirability, viability, and feasibility overlapping on product-level decisions',
           },
           {
             type: 'callout',
@@ -278,16 +282,11 @@ export const DAYS: DayContent[] = [
           'Products aren’t built once and left alone — they improve continuously from real usage data. A PM’s job is to optimise the spin of that flywheel.',
         blocks: [
           {
-            type: 'triad',
-            variant: 'balance',
-            center: 'Flywheel',
+            type: 'image',
+            src: productFlywheel,
+            alt: 'Product flywheel diagram: delivery date, quality, and features balanced around the flywheel',
             caption:
               'Push too hard on any one and the other two suffer — the craft is keeping all three turning together, release after release.',
-            nodes: [
-              { label: 'Delivery date', desc: 'How fast it ships' },
-              { label: 'Quality', desc: 'How good it is' },
-              { label: 'Features', desc: 'How much it does' },
-            ],
           },
           {
             type: 'quote',
@@ -304,8 +303,12 @@ export const DAYS: DayContent[] = [
           'This week circles back to one uncomfortable truth: customers are bad at telling you what to build, and good at telling you what’s wrong with their lives. Two complementary frameworks take that seriously.',
         blocks: [
           {
+            type: 'subheading',
+            text: 'Jobs to be Done',
+          },
+          {
             type: 'paragraph',
-            text: 'Jobs to be Done. Clayton Christensen and colleagues argue that most innovation fails because companies obsess over correlational data — demographics, psychographics, “customers like this also bought that” — when what drives a purchase is causal: the progress a customer is trying to make in a circumstance. When we buy a product, we’re “hiring” it to do a job. Do it well and we hire it again; do it badly and we fire it and look for an alternative.',
+            text: 'Clayton Christensen and colleagues argue that most innovation fails because companies obsess over correlational data — demographics, psychographics, “customers like this also bought that” — when what drives a purchase is causal: the progress a customer is trying to make in a circumstance. When we buy a product, we’re “hiring” it to do a job. Do it well and we hire it again; do it badly and we fire it and look for an alternative.',
           },
           {
             type: 'callout',
@@ -318,8 +321,12 @@ export const DAYS: DayContent[] = [
             text: 'The lesson: don’t just ask what feature someone wants. Ask what progress they’re trying to make, in their actual circumstance — functionally, socially, and emotionally — and design for that.',
           },
           {
+            type: 'subheading',
+            text: 'Outcome-Driven Innovation',
+          },
+          {
             type: 'paragraph',
-            text: 'Outcome-Driven Innovation. Anthony Ulwick’s approach starts from a sharper insight: customers are good at describing outcomes and bad at designing solutions. Ask what they want built and you get incremental, “me-too” ideas. Ask what they want the product to do for them — the outcome, not the mechanism — and you get raw material an R&D team can work with.',
+            text: 'Anthony Ulwick’s approach starts from a sharper insight: customers are good at describing outcomes and bad at designing solutions. Ask what they want built and you get incremental, “me-too” ideas. Ask what they want the product to do for them — the outcome, not the mechanism — and you get raw material an R&D team can work with.',
           },
           {
             type: 'steps',
@@ -894,7 +901,9 @@ export const DAYS: DayContent[] = [
               { label: 'Big bet', value: 2, complexity: 2 },
               { label: 'Nice touch', value: 1, complexity: 0 },
               { label: 'Steady polish', value: 1, complexity: 1 },
+              { label: 'Slow burn', value: 1, complexity: 2 },
               { label: 'Filler', value: 0, complexity: 0 },
+              { label: 'Time sink', value: 0, complexity: 1 },
               { label: 'Money pit', value: 0, complexity: 2 },
             ],
           },

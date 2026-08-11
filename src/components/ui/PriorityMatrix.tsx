@@ -40,12 +40,21 @@ export function PriorityMatrix({ xLabel, yLabel, items, zoneLabel = 'Build first
               COMPLEXITY_COLS.map((c) => {
                 const cellItems = items.filter((it) => it.value === v && it.complexity === c)
                 const isZone = v === 2 && c === 0
+                const desirability = v - c
+                const isBest = desirability >= 1
+                const isWorst = desirability <= -1
                 return (
                   <div
                     key={`${v}-${c}`}
                     className={clsx(
-                      'relative flex min-h-[5rem] flex-col gap-1.5 rounded-xl border p-2.5',
-                      isZone ? 'border-brand/40 bg-blue-wash' : 'border-rule/60 bg-surface',
+                      'relative flex min-h-[5rem] flex-col rounded-xl border p-2.5',
+                      isZone
+                        ? 'border-brand/40 bg-blue-wash'
+                        : isBest
+                          ? 'border-brand/20 bg-[#EDEFF6]'
+                          : isWorst
+                            ? 'border-[#e8b4ae]/50 bg-[#FAE9E7]'
+                            : 'border-rule/60 bg-surface',
                     )}
                   >
                     {isZone && (
@@ -53,17 +62,21 @@ export function PriorityMatrix({ xLabel, yLabel, items, zoneLabel = 'Build first
                         {zoneLabel}
                       </span>
                     )}
-                    {cellItems.map((it, i) => (
-                      <span
-                        key={i}
-                        className={clsx(
-                          'rounded-full px-2 py-0.5 text-center text-[0.8rem] font-medium leading-tight',
-                          it.highlight ? 'bg-brand text-paper' : 'bg-ink/5 text-ink',
-                        )}
-                      >
-                        {it.label}
-                      </span>
-                    ))}
+                    <div className="flex flex-1 flex-col items-center justify-center gap-1.5">
+                      {cellItems.map((it, i) => (
+                        <span
+                          key={i}
+                          className={clsx(
+                            'text-center text-base font-medium leading-tight',
+                            it.highlight
+                              ? 'w-full rounded-full bg-brand px-2 py-0.5 text-paper'
+                              : 'text-ink',
+                          )}
+                        >
+                          {it.label}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 )
               }),
