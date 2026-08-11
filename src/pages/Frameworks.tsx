@@ -1,16 +1,18 @@
 import { PageHeader, Section, Reveal, PrevNextPager } from '../components/layout'
 import { FrameworkTable, Callout } from '../components/ui'
 import { FRAMEWORKS, FRAMEWORK_COMPARISON } from '../data/frameworks'
+import { pager } from '../lib/pager'
 
 export function Frameworks() {
+  const { prev, next } = pager('/frameworks')
   return (
     <>
       <PageHeader
         kicker="Reference"
         title="Product frameworks"
         subtitle="The recurring models this course leans on. Each one is a lens — reach for the one that fits the question you’re trying to answer."
-        prev={{ to: '/', label: 'Overview' }}
-        next={{ to: '/day/1', label: 'Day 1 · Discovery' }}
+        prev={prev}
+        next={next}
       />
 
       <Section
@@ -65,8 +67,8 @@ export function Frameworks() {
       </Section>
 
       <PrevNextPager
-        prev={{ to: '/', label: 'Overview' }}
-        next={{ to: '/day/1', label: 'Day 1 · Discovery' }}
+        prev={prev}
+        next={next}
       />
     </>
   )

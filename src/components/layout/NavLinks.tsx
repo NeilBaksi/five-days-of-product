@@ -8,15 +8,18 @@ interface NavLinksProps {
   onNavigate?: () => void
 }
 
+const GROUPS = [
+  { group: 'general' as const },
+  { group: 'toolkit' as const, header: 'Toolkit' },
+  { group: 'day' as const, header: 'Course' },
+]
+
 /**
- * Renders the NAV array grouped (general, then a "COURSE" divider, then
- * days) as NavLinks with an animated active-state background shared between
- * Sidebar and MobileDrawer via `layoutId`.
+ * Renders the NAV array in labelled groups (general, then "TOOLKIT", then
+ * "COURSE") as NavLinks with an animated active-state background shared
+ * between Sidebar and MobileDrawer via `layoutId`.
  */
 export function NavLinks({ layoutId, onNavigate }: NavLinksProps) {
-  const general = NAV.filter((item) => item.group === 'general')
-  const days = NAV.filter((item) => item.group === 'day')
-
   const renderLink = (item: (typeof NAV)[number]) => (
     <li key={item.to}>
       <NavLink
@@ -51,9 +54,14 @@ export function NavLinks({ layoutId, onNavigate }: NavLinksProps) {
 
   return (
     <>
-      <ul className="flex flex-col gap-1">{general.map(renderLink)}</ul>
-      <p className="kicker mt-6 mb-2 px-3">Course</p>
-      <ul className="flex flex-col gap-1">{days.map(renderLink)}</ul>
+      {GROUPS.map(({ group, header }) => (
+        <div key={group}>
+          {header && <p className="kicker mt-6 mb-2 px-3">{header}</p>}
+          <ul className="flex flex-col gap-1">
+            {NAV.filter((item) => item.group === group).map(renderLink)}
+          </ul>
+        </div>
+      ))}
     </>
   )
 }

@@ -8,8 +8,8 @@ export interface NavItem {
   label: string
   /** Short mono index shown in the rail, e.g. "00", "F", "01" */
   index: string
-  /** Grouping for the sidebar (course days vs. general) */
-  group: 'general' | 'day'
+  /** Grouping for the sidebar (general, reference toolkit, or course days) */
+  group: 'general' | 'toolkit' | 'day'
 }
 
 export type CalloutKind = 'info' | 'tip' | 'warning' | 'example'
@@ -58,6 +58,8 @@ export interface StoryItem {
 /** Discriminated union of renderable content blocks inside a Day section. */
 export type ContentBlock =
   | { type: 'paragraph'; text: string }
+  | { type: 'subheading'; text: string }
+  | { type: 'image'; src: string; alt: string; caption?: string }
   | { type: 'cards'; items: { title: string; body: string; icon?: string }[] }
   | { type: 'callout'; kind: CalloutKind; title: string; body: string }
   | { type: 'table'; data: FrameworkTableData }
@@ -93,6 +95,8 @@ export type ContentBlock =
       center: string
       nodes: { label: string; desc?: string }[]
       caption?: string
+      vennImage?: string
+      vennImageAlt?: string
     }
   | { type: 'wheel'; center: string; spokes: { label: string; desc?: string }[]; emphasisIndex?: number }
   | {
@@ -150,4 +154,37 @@ export interface DayContent {
   takeaways: string[]
   /** optional source citations rendered as an attribution footer */
   sources?: { label: string; url: string }[]
+}
+
+// --- Toolkit (reference section) ---
+
+export type GlossaryCategory =
+  | 'Engineering & Technical'
+  | 'Design & UX'
+  | 'Process & Agile'
+  | 'Data & Metrics'
+  | 'Product & Growth'
+
+export interface GlossaryTerm {
+  term: string
+  category: GlossaryCategory
+  definition: string
+  /** cross-reference to another page, e.g. { to: '/day/3', label: 'Day 3' } */
+  seeAlso?: { to: string; label: string }
+}
+
+export interface PromptEntry {
+  id: string
+  title: string
+  /** the one-line "use this when" framing */
+  useWhen: string
+  /** raw text copied verbatim; [bracketed] spans render highlighted */
+  prompt: string
+  tip?: string
+}
+
+export interface SenseExercise {
+  title: string
+  instruction: string
+  questions: string[]
 }

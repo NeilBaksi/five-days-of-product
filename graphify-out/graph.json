@@ -4,43 +4,32 @@
   "graph": {
     "hyperedges": [
       {
-        "id": "removed_topics_hyperedge_day2_prioritisation_swap",
-        "label": "Day 2 prioritisation model swap: RICE dropped, MoSCoW + heatmap adopted",
-        "members": [
-          "removed_topics_rice_prioritisation",
-          "removed_topics_moscow",
-          "removed_topics_value_complexity_heatmap",
-          "removed_topics_day2_rewrite"
-        ],
-        "confidence": "INFERRED",
-        "confidence_score": 0.85,
-        "source_file": "REMOVED_TOPICS.md"
-      },
-      {
-        "id": "removed_topics_hyperedge_kano_coverage",
-        "label": "Kano model/survey coverage split across Day 2 and Day 3",
-        "members": [
-          "removed_topics_kano_model_day2",
-          "removed_topics_kano_survey_walkthrough",
-          "removed_topics_duplicate_kano_cards_removed",
-          "removed_topics_day3_rewrite"
-        ],
-        "confidence": "INFERRED",
-        "confidence_score": 0.8,
-        "source_file": "REMOVED_TOPICS.md"
-      },
-      {
-        "id": "removed_topics_hyperedge_day3_exclusions",
-        "label": "Day 3 deliberate exclusions: proprietary/admin content replaced by generic teaching material",
-        "members": [
-          "removed_topics_internal_roadmap_screenshots",
-          "removed_topics_roadmaps_section_template",
-          "removed_topics_bill_payment_example_genericised",
-          "removed_topics_course_admin_excluded"
-        ],
+        "id": "product_flywheel_tradeoff_triad",
+        "relation": "conceptually_related_to",
         "confidence": "EXTRACTED",
         "confidence_score": 1.0,
-        "source_file": "REMOVED_TOPICS.md"
+        "source_file": "src/assets/product-flywheel.png",
+        "description": "Three interdependent product tradeoff levers balanced around a shared flywheel",
+        "nodes": [
+          "product_flywheel_features",
+          "product_flywheel_deliverydate",
+          "product_flywheel_quality"
+        ],
+        "label": "Three interdependent product tradeoff levers balanced around a shared flywheel"
+      },
+      {
+        "id": "product_level_decisions_triad",
+        "relation": "conceptually_related_to",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "src/assets/product-level-decisions.png",
+        "description": "Three overlapping lenses (customer, business, technology+people) that together define product-level decisions",
+        "nodes": [
+          "product_level_decisions_desirability",
+          "product_level_decisions_viability",
+          "product_level_decisions_feasibility"
+        ],
+        "label": "Three overlapping lenses (customer, business, technology+people) that together define product-level decisions"
       }
     ]
   },
@@ -50,7 +39,7 @@
       "file_type": "code",
       "source_file": "tailwind.config.ts",
       "source_location": "L1",
-      "community": 34,
+      "community": 38,
       "norm_label": "tailwind.config.ts",
       "id": "tailwind_config_ts"
     },
@@ -59,7 +48,7 @@
       "file_type": "code",
       "source_file": "vite.config.ts",
       "source_location": "L1",
-      "community": 35,
+      "community": 39,
       "norm_label": "vite.config.ts",
       "id": "vite_config_ts"
     },
@@ -68,7 +57,7 @@
       "file_type": "code",
       "source_file": "postcss.config.js",
       "source_location": "L1",
-      "community": 36,
+      "community": 40,
       "norm_label": "postcss.config.js",
       "id": "postcss_config_js"
     },
@@ -85,7 +74,7 @@
       "label": "App()",
       "file_type": "code",
       "source_file": "src/App.tsx",
-      "source_location": "L7",
+      "source_location": "L11",
       "community": 8,
       "norm_label": "app()",
       "id": "app_app"
@@ -95,7 +84,7 @@
       "file_type": "code",
       "source_file": "src/main.tsx",
       "source_location": "L1",
-      "community": 37,
+      "community": 41,
       "norm_label": "main.tsx",
       "id": "src_main_tsx"
     },
@@ -104,7 +93,7 @@
       "file_type": "code",
       "source_file": "src/types/index.ts",
       "source_location": "L1",
-      "community": 38,
+      "community": 42,
       "norm_label": "index.ts",
       "id": "src_types_index_ts"
     },
@@ -113,7 +102,7 @@
       "file_type": "code",
       "source_file": "src/components/ui/StepList.tsx",
       "source_location": "L1",
-      "community": 39,
+      "community": 43,
       "norm_label": "steplist.tsx",
       "id": "src_components_ui_steplist_tsx"
     },
@@ -122,7 +111,7 @@
       "file_type": "code",
       "source_file": "src/components/ui/PullQuote.tsx",
       "source_location": "L1",
-      "community": 40,
+      "community": 44,
       "norm_label": "pullquote.tsx",
       "id": "src_components_ui_pullquote_tsx"
     },
@@ -149,7 +138,7 @@
       "file_type": "code",
       "source_file": "src/components/ui/Card.tsx",
       "source_location": "L1",
-      "community": 41,
+      "community": 45,
       "norm_label": "card.tsx",
       "id": "src_components_ui_card_tsx"
     },
@@ -230,7 +219,7 @@
       "file_type": "code",
       "source_file": "src/components/ui/Accordion.tsx",
       "source_location": "L1",
-      "community": 42,
+      "community": 46,
       "norm_label": "accordion.tsx",
       "id": "src_components_ui_accordion_tsx"
     },
@@ -257,7 +246,7 @@
       "file_type": "code",
       "source_file": "src/components/ui/StoryCards.tsx",
       "source_location": "L1",
-      "community": 43,
+      "community": 47,
       "norm_label": "storycards.tsx",
       "id": "src_components_ui_storycards_tsx"
     },
@@ -266,7 +255,7 @@
       "file_type": "code",
       "source_file": "src/components/ui/PressureDiagram.tsx",
       "source_location": "L1",
-      "community": 44,
+      "community": 48,
       "norm_label": "pressurediagram.tsx",
       "id": "src_components_ui_pressurediagram_tsx"
     },
@@ -329,7 +318,7 @@
       "file_type": "code",
       "source_file": "src/components/ui/Spectrum.tsx",
       "source_location": "L1",
-      "community": 45,
+      "community": 49,
       "norm_label": "spectrum.tsx",
       "id": "src_components_ui_spectrum_tsx"
     },
@@ -356,7 +345,7 @@
       "file_type": "code",
       "source_file": "src/components/ui/FrameworkTable.tsx",
       "source_location": "L1",
-      "community": 46,
+      "community": 50,
       "norm_label": "frameworktable.tsx",
       "id": "src_components_ui_frameworktable_tsx"
     },
@@ -383,7 +372,7 @@
       "file_type": "code",
       "source_file": "src/components/ui/index.ts",
       "source_location": "L1",
-      "community": 47,
+      "community": 51,
       "norm_label": "index.ts",
       "id": "src_components_ui_index_ts"
     },
@@ -392,7 +381,7 @@
       "file_type": "code",
       "source_file": "src/components/ui/Button.tsx",
       "source_location": "L1",
-      "community": 48,
+      "community": 52,
       "norm_label": "button.tsx",
       "id": "src_components_ui_button_tsx"
     },
@@ -437,7 +426,7 @@
       "file_type": "code",
       "source_file": "src/components/ui/GoodBadList.tsx",
       "source_location": "L1",
-      "community": 49,
+      "community": 53,
       "norm_label": "goodbadlist.tsx",
       "id": "src_components_ui_goodbadlist_tsx"
     },
@@ -464,7 +453,7 @@
       "file_type": "code",
       "source_file": "src/components/layout/NavLinks.tsx",
       "source_location": "L1",
-      "community": 50,
+      "community": 54,
       "norm_label": "navlinks.tsx",
       "id": "src_components_layout_navlinks_tsx"
     },
@@ -473,7 +462,7 @@
       "file_type": "code",
       "source_file": "src/components/layout/PrevNextPager.tsx",
       "source_location": "L1",
-      "community": 51,
+      "community": 55,
       "norm_label": "prevnextpager.tsx",
       "id": "src_components_layout_prevnextpager_tsx"
     },
@@ -500,7 +489,7 @@
       "file_type": "code",
       "source_file": "src/components/layout/Section.tsx",
       "source_location": "L1",
-      "community": 52,
+      "community": 56,
       "norm_label": "section.tsx",
       "id": "src_components_layout_section_tsx"
     },
@@ -527,7 +516,7 @@
       "file_type": "code",
       "source_file": "src/components/layout/MobileDrawer.tsx",
       "source_location": "L1",
-      "community": 53,
+      "community": 57,
       "norm_label": "mobiledrawer.tsx",
       "id": "src_components_layout_mobiledrawer_tsx"
     },
@@ -554,7 +543,7 @@
       "file_type": "code",
       "source_file": "src/components/layout/index.ts",
       "source_location": "L1",
-      "community": 54,
+      "community": 58,
       "norm_label": "index.ts",
       "id": "src_components_layout_index_ts"
     },
@@ -635,7 +624,7 @@
       "file_type": "code",
       "source_file": "src/lib/accents.ts",
       "source_location": "L1",
-      "community": 55,
+      "community": 59,
       "norm_label": "accents.ts",
       "id": "src_lib_accents_ts"
     },
@@ -644,7 +633,7 @@
       "file_type": "code",
       "source_file": "src/data/frameworks.ts",
       "source_location": "L1",
-      "community": 56,
+      "community": 60,
       "norm_label": "frameworks.ts",
       "id": "src_data_frameworks_ts"
     },
@@ -653,7 +642,7 @@
       "file_type": "code",
       "source_file": "src/data/nav.ts",
       "source_location": "L1",
-      "community": 57,
+      "community": 61,
       "norm_label": "nav.ts",
       "id": "src_data_nav_ts"
     },
@@ -670,7 +659,7 @@
       "label": "getDay()",
       "file_type": "code",
       "source_file": "src/data/days.ts",
-      "source_location": "L1645",
+      "source_location": "L1654",
       "community": 30,
       "norm_label": "getday()",
       "id": "days_getday"
@@ -680,7 +669,7 @@
       "file_type": "code",
       "source_file": "src/data/landing.ts",
       "source_location": "L1",
-      "community": 58,
+      "community": 62,
       "norm_label": "landing.ts",
       "id": "src_data_landing_ts"
     },
@@ -689,7 +678,7 @@
       "file_type": "code",
       "source_file": "src/pages/blocks.tsx",
       "source_location": "L1",
-      "community": 59,
+      "community": 63,
       "norm_label": "blocks.tsx",
       "id": "src_pages_blocks_tsx"
     },
@@ -698,7 +687,7 @@
       "file_type": "code",
       "source_file": "src/pages/Day.tsx",
       "source_location": "L1",
-      "community": 60,
+      "community": 64,
       "norm_label": "day.tsx",
       "id": "src_pages_day_tsx"
     },
@@ -707,7 +696,7 @@
       "file_type": "code",
       "source_file": "src/pages/Frameworks.tsx",
       "source_location": "L1",
-      "community": 61,
+      "community": 65,
       "norm_label": "frameworks.tsx",
       "id": "src_pages_frameworks_tsx"
     },
@@ -716,7 +705,7 @@
       "file_type": "code",
       "source_file": "src/pages/Landing.tsx",
       "source_location": "L1",
-      "community": 62,
+      "community": 66,
       "norm_label": "landing.tsx",
       "id": "src_pages_landing_tsx"
     },
@@ -729,7 +718,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "root div (#root)",
       "id": "index_root_div"
     },
@@ -742,7 +731,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "main script entry (/src/main.tsx)",
       "id": "index_main_script"
     },
@@ -755,7 +744,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 63,
+      "community": 67,
       "norm_label": "inline svg favicon",
       "id": "index_favicon"
     },
@@ -768,7 +757,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 64,
+      "community": 68,
       "norm_label": "meta description",
       "id": "index_meta_description"
     },
@@ -781,7 +770,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 65,
+      "community": 69,
       "norm_label": "open graph meta tags",
       "id": "index_og_meta"
     },
@@ -807,7 +796,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 66,
+      "community": 70,
       "norm_label": "page title",
       "id": "index_title"
     },
@@ -820,7 +809,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "five days of product (project)",
       "id": "readme_project"
     },
@@ -833,7 +822,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "live site (github pages)",
       "id": "readme_live_site"
     },
@@ -846,7 +835,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "react 19",
       "id": "readme_react"
     },
@@ -859,7 +848,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "vite 8",
       "id": "readme_vite"
     },
@@ -872,7 +861,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "typescript (strict)",
       "id": "readme_typescript"
     },
@@ -885,7 +874,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "tailwind css v3 (tailwind.config.ts)",
       "id": "readme_tailwind_config"
     },
@@ -898,7 +887,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "react-router-dom (hashrouter)",
       "id": "readme_react_router"
     },
@@ -911,7 +900,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "framer-motion",
       "id": "readme_framer_motion"
     },
@@ -924,7 +913,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "lucide-react",
       "id": "readme_lucide_react"
     },
@@ -1041,7 +1030,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "deploy.yml (github actions)",
       "id": "readme_deploy_workflow"
     },
@@ -1054,7 +1043,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "github pages deployment",
       "id": "readme_github_pages"
     },
@@ -1063,162 +1052,162 @@
       "file_type": "code",
       "source_file": "src/components/ui/QuoteBank.tsx",
       "source_location": "L1",
-      "id": "src_components_ui_quotebank_tsx",
       "community": 6,
-      "norm_label": "quotebank.tsx"
+      "norm_label": "quotebank.tsx",
+      "id": "src_components_ui_quotebank_tsx"
     },
     {
       "label": "chunkPairs()",
       "file_type": "code",
       "source_file": "src/components/ui/QuoteBank.tsx",
       "source_location": "L12",
-      "id": "quotebank_chunkpairs",
       "community": 6,
-      "norm_label": "chunkpairs()"
+      "norm_label": "chunkpairs()",
+      "id": "quotebank_chunkpairs"
     },
     {
       "label": "QuoteCard()",
       "file_type": "code",
       "source_file": "src/components/ui/QuoteBank.tsx",
       "source_location": "L18",
-      "id": "quotebank_quotecard",
       "community": 6,
-      "norm_label": "quotecard()"
+      "norm_label": "quotecard()",
+      "id": "quotebank_quotecard"
     },
     {
       "label": "goTo()",
       "file_type": "code",
       "source_file": "src/components/ui/QuoteBank.tsx",
       "source_location": "L52",
-      "id": "quotebank_goto",
       "community": 6,
-      "norm_label": "goto()"
+      "norm_label": "goto()",
+      "id": "quotebank_goto"
     },
     {
       "label": "PersonaCard.tsx",
       "file_type": "code",
       "source_file": "src/components/ui/PersonaCard.tsx",
       "source_location": "L1",
-      "id": "src_components_ui_personacard_tsx",
       "community": 31,
-      "norm_label": "personacard.tsx"
+      "norm_label": "personacard.tsx",
+      "id": "src_components_ui_personacard_tsx"
     },
     {
       "label": "PersonaCard()",
       "file_type": "code",
       "source_file": "src/components/ui/PersonaCard.tsx",
       "source_location": "L13",
-      "id": "personacard_personacard",
       "community": 31,
-      "norm_label": "personacard()"
+      "norm_label": "personacard()",
+      "id": "personacard_personacard"
     },
     {
       "label": "StrategyStack.tsx",
       "file_type": "code",
       "source_file": "src/components/ui/StrategyStack.tsx",
       "source_location": "L1",
-      "id": "src_components_ui_strategystack_tsx",
-      "community": 67,
-      "norm_label": "strategystack.tsx"
+      "community": 71,
+      "norm_label": "strategystack.tsx",
+      "id": "src_components_ui_strategystack_tsx"
     },
     {
       "label": "KanoCurve.tsx",
       "file_type": "code",
       "source_file": "src/components/ui/KanoCurve.tsx",
       "source_location": "L1",
-      "id": "src_components_ui_kanocurve_tsx",
-      "community": 68,
-      "norm_label": "kanocurve.tsx"
+      "community": 72,
+      "norm_label": "kanocurve.tsx",
+      "id": "src_components_ui_kanocurve_tsx"
     },
     {
       "label": "ConcretenessLadder.tsx",
       "file_type": "code",
       "source_file": "src/components/ui/ConcretenessLadder.tsx",
       "source_location": "L1",
-      "id": "src_components_ui_concretenessladder_tsx",
-      "community": 69,
-      "norm_label": "concretenessladder.tsx"
+      "community": 73,
+      "norm_label": "concretenessladder.tsx",
+      "id": "src_components_ui_concretenessladder_tsx"
     },
     {
       "label": "PriorityMatrix.tsx",
       "file_type": "code",
       "source_file": "src/components/ui/PriorityMatrix.tsx",
       "source_location": "L1",
-      "id": "src_components_ui_prioritymatrix_tsx",
-      "community": 70,
-      "norm_label": "prioritymatrix.tsx"
+      "community": 74,
+      "norm_label": "prioritymatrix.tsx",
+      "id": "src_components_ui_prioritymatrix_tsx"
     },
     {
       "label": "RoadmapCycle.tsx",
       "file_type": "code",
       "source_file": "src/components/ui/RoadmapCycle.tsx",
       "source_location": "L1",
-      "id": "src_components_ui_roadmapcycle_tsx",
       "community": 32,
-      "norm_label": "roadmapcycle.tsx"
+      "norm_label": "roadmapcycle.tsx",
+      "id": "src_components_ui_roadmapcycle_tsx"
     },
     {
       "label": "pad()",
       "file_type": "code",
       "source_file": "src/components/ui/RoadmapCycle.tsx",
       "source_location": "L8",
-      "id": "roadmapcycle_pad",
       "community": 32,
-      "norm_label": "pad()"
+      "norm_label": "pad()",
+      "id": "roadmapcycle_pad"
     },
     {
       "label": "MoscowRings.tsx",
       "file_type": "code",
       "source_file": "src/components/ui/MoscowRings.tsx",
       "source_location": "L1",
-      "id": "src_components_ui_moscowrings_tsx",
       "community": 33,
-      "norm_label": "moscowrings.tsx"
+      "norm_label": "moscowrings.tsx",
+      "id": "src_components_ui_moscowrings_tsx"
     },
     {
       "label": "MoscowRings()",
       "file_type": "code",
       "source_file": "src/components/ui/MoscowRings.tsx",
       "source_location": "L20",
-      "id": "moscowrings_moscowrings",
       "community": 33,
-      "norm_label": "moscowrings()"
+      "norm_label": "moscowrings()",
+      "id": "moscowrings_moscowrings"
     },
     {
       "label": "CompetencyWheel.tsx",
       "file_type": "code",
       "source_file": "src/components/ui/CompetencyWheel.tsx",
       "source_location": "L1",
-      "id": "src_components_ui_competencywheel_tsx",
-      "community": 71,
-      "norm_label": "competencywheel.tsx"
+      "community": 75,
+      "norm_label": "competencywheel.tsx",
+      "id": "src_components_ui_competencywheel_tsx"
     },
     {
       "label": "OpportunityChart.tsx",
       "file_type": "code",
       "source_file": "src/components/ui/OpportunityChart.tsx",
       "source_location": "L1",
-      "id": "src_components_ui_opportunitychart_tsx",
       "community": 7,
-      "norm_label": "opportunitychart.tsx"
+      "norm_label": "opportunitychart.tsx",
+      "id": "src_components_ui_opportunitychart_tsx"
     },
     {
       "label": "plotX()",
       "file_type": "code",
       "source_file": "src/components/ui/OpportunityChart.tsx",
       "source_location": "L15",
-      "id": "opportunitychart_plotx",
       "community": 7,
-      "norm_label": "plotx()"
+      "norm_label": "plotx()",
+      "id": "opportunitychart_plotx"
     },
     {
       "label": "plotY()",
       "file_type": "code",
       "source_file": "src/components/ui/OpportunityChart.tsx",
       "source_location": "L16",
-      "id": "opportunitychart_ploty",
       "community": 7,
-      "norm_label": "ploty()"
+      "norm_label": "ploty()",
+      "id": "opportunitychart_ploty"
     },
     {
       "label": "Removed/Not-Yet-Covered Topics tracking file",
@@ -1229,9 +1218,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_tracking_file",
-      "community": 1,
-      "norm_label": "removed/not-yet-covered topics tracking file"
+      "community": 0,
+      "norm_label": "removed/not-yet-covered topics tracking file",
+      "id": "removed_topics_tracking_file"
     },
     {
       "label": "Day 1 rewrite (2026-08-07)",
@@ -1242,9 +1231,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_day1_rewrite",
-      "community": 1,
-      "norm_label": "day 1 rewrite (2026-08-07)"
+      "community": 0,
+      "norm_label": "day 1 rewrite (2026-08-07)",
+      "id": "removed_topics_day1_rewrite"
     },
     {
       "label": "Double Diamond framework (Discover-Define-Develop-Deliver)",
@@ -1255,9 +1244,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_double_diamond",
-      "community": 1,
-      "norm_label": "double diamond framework (discover-define-develop-deliver)"
+      "community": 0,
+      "norm_label": "double diamond framework (discover-define-develop-deliver)",
+      "id": "removed_topics_double_diamond"
     },
     {
       "label": "Running a JTBD interview - practical steps (Recruit-Interview-Synthesise)",
@@ -1268,9 +1257,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_jtbd_interview_steps",
-      "community": 1,
-      "norm_label": "running a jtbd interview - practical steps (recruit-interview-synthesise)"
+      "community": 0,
+      "norm_label": "running a jtbd interview - practical steps (recruit-interview-synthesise)",
+      "id": "removed_topics_jtbd_interview_steps"
     },
     {
       "label": "Discovery/Definition/Delivery three-phase framing",
@@ -1281,9 +1270,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_discovery_definition_delivery",
-      "community": 1,
-      "norm_label": "discovery/definition/delivery three-phase framing"
+      "community": 0,
+      "norm_label": "discovery/definition/delivery three-phase framing",
+      "id": "removed_topics_discovery_definition_delivery"
     },
     {
       "label": "Days 3-5 scaffold placeholders untouched note",
@@ -1294,9 +1283,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_days3to5_untouched_note",
-      "community": 1,
-      "norm_label": "days 3-5 scaffold placeholders untouched note"
+      "community": 0,
+      "norm_label": "days 3-5 scaffold placeholders untouched note",
+      "id": "removed_topics_days3to5_untouched_note"
     },
     {
       "label": "Day 2 rewrite (2026-08-08)",
@@ -1307,9 +1296,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_day2_rewrite",
-      "community": 1,
-      "norm_label": "day 2 rewrite (2026-08-08)"
+      "community": 0,
+      "norm_label": "day 2 rewrite (2026-08-08)",
+      "id": "removed_topics_day2_rewrite"
     },
     {
       "label": "RICE prioritisation (Reach x Impact x Confidence / Effort)",
@@ -1320,9 +1309,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_rice_prioritisation",
-      "community": 1,
-      "norm_label": "rice prioritisation (reach x impact x confidence / effort)"
+      "community": 0,
+      "norm_label": "rice prioritisation (reach x impact x confidence / effort)",
+      "id": "removed_topics_rice_prioritisation"
     },
     {
       "label": "MoSCoW prioritisation (Day 2 real content)",
@@ -1333,9 +1322,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_moscow",
-      "community": 1,
-      "norm_label": "moscow prioritisation (day 2 real content)"
+      "community": 0,
+      "norm_label": "moscow prioritisation (day 2 real content)",
+      "id": "removed_topics_moscow"
     },
     {
       "label": "Value/complexity heatmap (Day 2 real content)",
@@ -1346,9 +1335,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_value_complexity_heatmap",
-      "community": 1,
-      "norm_label": "value/complexity heatmap (day 2 real content)"
+      "community": 0,
+      "norm_label": "value/complexity heatmap (day 2 real content)",
+      "id": "removed_topics_value_complexity_heatmap"
     },
     {
       "label": "Day 3 rewrite (2026-08-10)",
@@ -1359,9 +1348,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_day3_rewrite",
-      "community": 2,
-      "norm_label": "day 3 rewrite (2026-08-10)"
+      "community": 0,
+      "norm_label": "day 3 rewrite (2026-08-10)",
+      "id": "removed_topics_day3_rewrite"
     },
     {
       "label": "Gold-plating warning callout",
@@ -1372,9 +1361,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_gold_plating_warning",
-      "community": 2,
-      "norm_label": "gold-plating warning callout"
+      "community": 0,
+      "norm_label": "gold-plating warning callout",
+      "id": "removed_topics_gold_plating_warning"
     },
     {
       "label": "Kano survey walkthrough (methodology, never written)",
@@ -1385,9 +1374,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_kano_survey_walkthrough",
-      "community": 2,
-      "norm_label": "kano survey walkthrough (methodology, never written)"
+      "community": 0,
+      "norm_label": "kano survey walkthrough (methodology, never written)",
+      "id": "removed_topics_kano_survey_walkthrough"
     },
     {
       "label": "Kano model (5-category cards + curve, taught on Day 2 ideation)",
@@ -1398,9 +1387,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_kano_model_day2",
-      "community": 2,
-      "norm_label": "kano model (5-category cards + curve, taught on day 2 ideation)"
+      "community": 0,
+      "norm_label": "kano model (5-category cards + curve, taught on day 2 ideation)",
+      "id": "removed_topics_kano_model_day2"
     },
     {
       "label": "Storyboarding and story mapping",
@@ -1411,9 +1400,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_storyboarding_story_mapping",
-      "community": 2,
-      "norm_label": "storyboarding and story mapping"
+      "community": 0,
+      "norm_label": "storyboarding and story mapping",
+      "id": "removed_topics_storyboarding_story_mapping"
     },
     {
       "label": "Duplicate Kano cards block removed (no loss)",
@@ -1424,9 +1413,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_duplicate_kano_cards_removed",
-      "community": 2,
-      "norm_label": "duplicate kano cards block removed (no loss)"
+      "community": 0,
+      "norm_label": "duplicate kano cards block removed (no loss)",
+      "id": "removed_topics_duplicate_kano_cards_removed"
     },
     {
       "label": "Day 3 title change: 'From Idea to Launch Plan' -> 'Design & Solution'",
@@ -1437,9 +1426,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_day3_title_change",
-      "community": 2,
-      "norm_label": "day 3 title change: 'from idea to launch plan' -> 'design & solution'"
+      "community": 0,
+      "norm_label": "day 3 title change: 'from idea to launch plan' -> 'design & solution'",
+      "id": "removed_topics_day3_title_change"
     },
     {
       "label": "Excluded from source Day 3 material (deliberate, not placeholders)",
@@ -1450,9 +1439,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_excluded_source_material",
       "community": 3,
-      "norm_label": "excluded from source day 3 material (deliberate, not placeholders)"
+      "norm_label": "excluded from source day 3 material (deliberate, not placeholders)",
+      "id": "removed_topics_excluded_source_material"
     },
     {
       "label": "Internal company roadmap screenshots (proprietary, excluded)",
@@ -1463,9 +1452,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_internal_roadmap_screenshots",
       "community": 3,
-      "norm_label": "internal company roadmap screenshots (proprietary, excluded)"
+      "norm_label": "internal company roadmap screenshots (proprietary, excluded)",
+      "id": "removed_topics_internal_roadmap_screenshots"
     },
     {
       "label": "Generic Strategic Theme -> Quarterly OKRs -> features template (roadmaps section)",
@@ -1476,9 +1465,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_roadmaps_section_template",
       "community": 3,
-      "norm_label": "generic strategic theme -> quarterly okrs -> features template (roadmaps section)"
+      "norm_label": "generic strategic theme -> quarterly okrs -> features template (roadmaps section)",
+      "id": "removed_topics_roadmaps_section_template"
     },
     {
       "label": "Bill-payment worked example, genericised persona",
@@ -1489,9 +1478,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_bill_payment_example_genericised",
       "community": 3,
-      "norm_label": "bill-payment worked example, genericised persona"
+      "norm_label": "bill-payment worked example, genericised persona",
+      "id": "removed_topics_bill_payment_example_genericised"
     },
     {
       "label": "Syndicate assignment logistics, deliverables, grading rubric (course admin, excluded)",
@@ -1502,9 +1491,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_course_admin_excluded",
       "community": 3,
-      "norm_label": "syndicate assignment logistics, deliverables, grading rubric (course admin, excluded)"
+      "norm_label": "syndicate assignment logistics, deliverables, grading rubric (course admin, excluded)",
+      "id": "removed_topics_course_admin_excluded"
     },
     {
       "label": "Instructor contact details and handoff slide (excluded)",
@@ -1515,9 +1504,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_instructor_contact_excluded",
       "community": 3,
-      "norm_label": "instructor contact details and handoff slide (excluded)"
+      "norm_label": "instructor contact details and handoff slide (excluded)",
+      "id": "removed_topics_instructor_contact_excluded"
     },
     {
       "label": "Desirability/viability/feasibility pyramid (Day 1 recap only, compact triad)",
@@ -1528,9 +1517,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_dvf_pyramid_recap",
       "community": 3,
-      "norm_label": "desirability/viability/feasibility pyramid (day 1 recap only, compact triad)"
+      "norm_label": "desirability/viability/feasibility pyramid (day 1 recap only, compact triad)",
+      "id": "removed_topics_dvf_pyramid_recap"
     },
     {
       "label": "src/data/frameworks.ts (double-diamond id entry)",
@@ -1541,9 +1530,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_frameworks_ts",
-      "community": 1,
-      "norm_label": "src/data/frameworks.ts (double-diamond id entry)"
+      "community": 0,
+      "norm_label": "src/data/frameworks.ts (double-diamond id entry)",
+      "id": "removed_topics_frameworks_ts"
     },
     {
       "label": "nav.ts (Day 3 label update)",
@@ -1554,9 +1543,239 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "removed_topics_nav_ts",
+      "community": 0,
+      "norm_label": "nav.ts (day 3 label update)",
+      "id": "removed_topics_nav_ts"
+    },
+    {
+      "label": "AbstractConcrete.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/AbstractConcrete.tsx",
+      "source_location": "L1",
+      "id": "src_components_ui_abstractconcrete_tsx",
+      "community": 34,
+      "norm_label": "abstractconcrete.tsx"
+    },
+    {
+      "label": "AbstractConcrete()",
+      "file_type": "code",
+      "source_file": "src/components/ui/AbstractConcrete.tsx",
+      "source_location": "L9",
+      "id": "abstractconcrete_abstractconcrete",
+      "community": 34,
+      "norm_label": "abstractconcrete()"
+    },
+    {
+      "label": "CopyButton.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/CopyButton.tsx",
+      "source_location": "L1",
+      "id": "src_components_ui_copybutton_tsx",
+      "community": 35,
+      "norm_label": "copybutton.tsx"
+    },
+    {
+      "label": "handleClick()",
+      "file_type": "code",
+      "source_file": "src/components/ui/CopyButton.tsx",
+      "source_location": "L20",
+      "id": "copybutton_handleclick",
+      "community": 35,
+      "norm_label": "handleclick()"
+    },
+    {
+      "label": "pager.ts",
+      "file_type": "code",
+      "source_file": "src/lib/pager.ts",
+      "source_location": "L1",
+      "id": "src_lib_pager_ts",
+      "community": 36,
+      "norm_label": "pager.ts"
+    },
+    {
+      "label": "pager()",
+      "file_type": "code",
+      "source_file": "src/lib/pager.ts",
+      "source_location": "L7",
+      "id": "pager_pager",
+      "community": 36,
+      "norm_label": "pager()"
+    },
+    {
+      "label": "glossary.ts",
+      "file_type": "code",
+      "source_file": "src/data/glossary.ts",
+      "source_location": "L1",
+      "id": "src_data_glossary_ts",
+      "community": 76,
+      "norm_label": "glossary.ts"
+    },
+    {
+      "label": "prompts.ts",
+      "file_type": "code",
+      "source_file": "src/data/prompts.ts",
+      "source_location": "L1",
+      "id": "src_data_prompts_ts",
+      "community": 77,
+      "norm_label": "prompts.ts"
+    },
+    {
+      "label": "toolkit.ts",
+      "file_type": "code",
+      "source_file": "src/data/toolkit.ts",
+      "source_location": "L1",
+      "id": "src_data_toolkit_ts",
+      "community": 78,
+      "norm_label": "toolkit.ts"
+    },
+    {
+      "label": "Templates.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/Templates.tsx",
+      "source_location": "L1",
+      "id": "src_pages_templates_tsx",
+      "community": 79,
+      "norm_label": "templates.tsx"
+    },
+    {
+      "label": "ProductSense.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/ProductSense.tsx",
+      "source_location": "L1",
+      "id": "src_pages_productsense_tsx",
+      "community": 80,
+      "norm_label": "productsense.tsx"
+    },
+    {
+      "label": "PromptLibrary.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/PromptLibrary.tsx",
+      "source_location": "L1",
+      "id": "src_pages_promptlibrary_tsx",
+      "community": 37,
+      "norm_label": "promptlibrary.tsx"
+    },
+    {
+      "label": "highlight()",
+      "file_type": "code",
+      "source_file": "src/pages/PromptLibrary.tsx",
+      "source_location": "L8",
+      "id": "promptlibrary_highlight",
+      "community": 37,
+      "norm_label": "highlight()"
+    },
+    {
+      "label": "Glossary.tsx",
+      "file_type": "code",
+      "source_file": "src/pages/Glossary.tsx",
+      "source_location": "L1",
+      "id": "src_pages_glossary_tsx",
+      "community": 81,
+      "norm_label": "glossary.tsx"
+    },
+    {
+      "label": "Product Flywheel diagram (Features / Delivery date / Quality)",
+      "file_type": "image",
+      "source_file": "src/assets/product-flywheel.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "product_flywheel_diagram",
       "community": 2,
-      "norm_label": "nav.ts (day 3 label update)"
+      "norm_label": "product flywheel diagram (features / delivery date / quality)"
+    },
+    {
+      "label": "Features - How much it does",
+      "file_type": "image",
+      "source_file": "src/assets/product-flywheel.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "product_flywheel_features",
+      "community": 2,
+      "norm_label": "features - how much it does"
+    },
+    {
+      "label": "Delivery date - How fast it ships",
+      "file_type": "image",
+      "source_file": "src/assets/product-flywheel.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "product_flywheel_deliverydate",
+      "community": 2,
+      "norm_label": "delivery date - how fast it ships"
+    },
+    {
+      "label": "Quality - How good it is",
+      "file_type": "image",
+      "source_file": "src/assets/product-flywheel.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "product_flywheel_quality",
+      "community": 2,
+      "norm_label": "quality - how good it is"
+    },
+    {
+      "label": "Product-Level Decisions Venn diagram (Desirability / Viability / Feasibility)",
+      "file_type": "image",
+      "source_file": "src/assets/product-level-decisions.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "product_level_decisions_diagram",
+      "community": 2,
+      "norm_label": "product-level decisions venn diagram (desirability / viability / feasibility)"
+    },
+    {
+      "label": "Desirability - Do people actually want this? (customer)",
+      "file_type": "image",
+      "source_file": "src/assets/product-level-decisions.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "product_level_decisions_desirability",
+      "community": 2,
+      "norm_label": "desirability - do people actually want this? (customer)"
+    },
+    {
+      "label": "Viability - Does it work commercially for us? (business)",
+      "file_type": "image",
+      "source_file": "src/assets/product-level-decisions.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "product_level_decisions_viability",
+      "community": 2,
+      "norm_label": "viability - does it work commercially for us? (business)"
+    },
+    {
+      "label": "Feasibility - Can we build and support it? (technology + people)",
+      "file_type": "image",
+      "source_file": "src/assets/product-level-decisions.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "product_level_decisions_feasibility",
+      "community": 2,
+      "norm_label": "feasibility - can we build and support it? (technology + people)"
     }
   ],
   "links": [
@@ -1564,7 +1783,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/App.tsx",
-      "source_location": "L7",
+      "source_location": "L11",
       "weight": 1.0,
       "_src": "src_app_tsx",
       "_tgt": "app_app",
@@ -1828,7 +2047,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/data/days.ts",
-      "source_location": "L1645",
+      "source_location": "L1654",
       "weight": 1.0,
       "_src": "src_data_days_ts",
       "_tgt": "days_getday",
@@ -2096,9 +2315,9 @@
       "weight": 1.0,
       "_src": "src_components_ui_quotebank_tsx",
       "_tgt": "quotebank_chunkpairs",
+      "confidence_score": 1.0,
       "source": "src_components_ui_quotebank_tsx",
-      "target": "quotebank_chunkpairs",
-      "confidence_score": 1.0
+      "target": "quotebank_chunkpairs"
     },
     {
       "relation": "contains",
@@ -2108,9 +2327,9 @@
       "weight": 1.0,
       "_src": "src_components_ui_quotebank_tsx",
       "_tgt": "quotebank_quotecard",
+      "confidence_score": 1.0,
       "source": "src_components_ui_quotebank_tsx",
-      "target": "quotebank_quotecard",
-      "confidence_score": 1.0
+      "target": "quotebank_quotecard"
     },
     {
       "relation": "contains",
@@ -2120,9 +2339,9 @@
       "weight": 1.0,
       "_src": "src_components_ui_quotebank_tsx",
       "_tgt": "quotebank_goto",
+      "confidence_score": 1.0,
       "source": "src_components_ui_quotebank_tsx",
-      "target": "quotebank_goto",
-      "confidence_score": 1.0
+      "target": "quotebank_goto"
     },
     {
       "relation": "contains",
@@ -2132,9 +2351,9 @@
       "weight": 1.0,
       "_src": "src_components_ui_personacard_tsx",
       "_tgt": "personacard_personacard",
+      "confidence_score": 1.0,
       "source": "src_components_ui_personacard_tsx",
-      "target": "personacard_personacard",
-      "confidence_score": 1.0
+      "target": "personacard_personacard"
     },
     {
       "relation": "contains",
@@ -2144,9 +2363,9 @@
       "weight": 1.0,
       "_src": "src_components_ui_roadmapcycle_tsx",
       "_tgt": "roadmapcycle_pad",
+      "confidence_score": 1.0,
       "source": "src_components_ui_roadmapcycle_tsx",
-      "target": "roadmapcycle_pad",
-      "confidence_score": 1.0
+      "target": "roadmapcycle_pad"
     },
     {
       "relation": "contains",
@@ -2156,9 +2375,9 @@
       "weight": 1.0,
       "_src": "src_components_ui_moscowrings_tsx",
       "_tgt": "moscowrings_moscowrings",
+      "confidence_score": 1.0,
       "source": "src_components_ui_moscowrings_tsx",
-      "target": "moscowrings_moscowrings",
-      "confidence_score": 1.0
+      "target": "moscowrings_moscowrings"
     },
     {
       "relation": "contains",
@@ -2168,9 +2387,9 @@
       "weight": 1.0,
       "_src": "src_components_ui_opportunitychart_tsx",
       "_tgt": "opportunitychart_plotx",
+      "confidence_score": 1.0,
       "source": "src_components_ui_opportunitychart_tsx",
-      "target": "opportunitychart_plotx",
-      "confidence_score": 1.0
+      "target": "opportunitychart_plotx"
     },
     {
       "relation": "contains",
@@ -2180,9 +2399,9 @@
       "weight": 1.0,
       "_src": "src_components_ui_opportunitychart_tsx",
       "_tgt": "opportunitychart_ploty",
+      "confidence_score": 1.0,
       "source": "src_components_ui_opportunitychart_tsx",
-      "target": "opportunitychart_ploty",
-      "confidence_score": 1.0
+      "target": "opportunitychart_ploty"
     },
     {
       "relation": "logs_entry",
@@ -2531,47 +2750,252 @@
       "_tgt": "removed_topics_roadmaps_section_template",
       "source": "removed_topics_internal_roadmap_screenshots",
       "target": "removed_topics_roadmaps_section_template"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/AbstractConcrete.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "src_components_ui_abstractconcrete_tsx",
+      "_tgt": "abstractconcrete_abstractconcrete",
+      "source": "src_components_ui_abstractconcrete_tsx",
+      "target": "abstractconcrete_abstractconcrete",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/CopyButton.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "src_components_ui_copybutton_tsx",
+      "_tgt": "copybutton_handleclick",
+      "source": "src_components_ui_copybutton_tsx",
+      "target": "copybutton_handleclick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/pager.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "src_lib_pager_ts",
+      "_tgt": "pager_pager",
+      "source": "src_lib_pager_ts",
+      "target": "pager_pager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/PromptLibrary.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "src_pages_promptlibrary_tsx",
+      "_tgt": "promptlibrary_highlight",
+      "source": "src_pages_promptlibrary_tsx",
+      "target": "promptlibrary_highlight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/assets/product-flywheel.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "product_flywheel_diagram",
+      "_tgt": "product_flywheel_features",
+      "source": "product_flywheel_diagram",
+      "target": "product_flywheel_features"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/assets/product-flywheel.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "product_flywheel_diagram",
+      "_tgt": "product_flywheel_deliverydate",
+      "source": "product_flywheel_diagram",
+      "target": "product_flywheel_deliverydate"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/assets/product-flywheel.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "product_flywheel_diagram",
+      "_tgt": "product_flywheel_quality",
+      "source": "product_flywheel_diagram",
+      "target": "product_flywheel_quality"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "src/assets/product-flywheel.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "product_flywheel_diagram",
+      "_tgt": "product_level_decisions_diagram",
+      "source": "product_flywheel_diagram",
+      "target": "product_level_decisions_diagram"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/assets/product-flywheel.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "product_flywheel_features",
+      "_tgt": "product_flywheel_deliverydate",
+      "source": "product_flywheel_features",
+      "target": "product_flywheel_deliverydate"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/assets/product-flywheel.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "product_flywheel_features",
+      "_tgt": "product_flywheel_quality",
+      "source": "product_flywheel_features",
+      "target": "product_flywheel_quality"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/assets/product-flywheel.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "product_flywheel_deliverydate",
+      "_tgt": "product_flywheel_quality",
+      "source": "product_flywheel_deliverydate",
+      "target": "product_flywheel_quality"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "src/assets/product-flywheel.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "product_flywheel_quality",
+      "_tgt": "product_level_decisions_feasibility",
+      "source": "product_flywheel_quality",
+      "target": "product_level_decisions_feasibility"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/assets/product-level-decisions.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "product_level_decisions_diagram",
+      "_tgt": "product_level_decisions_desirability",
+      "source": "product_level_decisions_diagram",
+      "target": "product_level_decisions_desirability"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/assets/product-level-decisions.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "product_level_decisions_diagram",
+      "_tgt": "product_level_decisions_viability",
+      "source": "product_level_decisions_diagram",
+      "target": "product_level_decisions_viability"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/assets/product-level-decisions.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "product_level_decisions_diagram",
+      "_tgt": "product_level_decisions_feasibility",
+      "source": "product_level_decisions_diagram",
+      "target": "product_level_decisions_feasibility"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/assets/product-level-decisions.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "product_level_decisions_desirability",
+      "_tgt": "product_level_decisions_viability",
+      "source": "product_level_decisions_desirability",
+      "target": "product_level_decisions_viability"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/assets/product-level-decisions.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "product_level_decisions_desirability",
+      "_tgt": "product_level_decisions_feasibility",
+      "source": "product_level_decisions_desirability",
+      "target": "product_level_decisions_feasibility"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/assets/product-level-decisions.png",
+      "source_location": null,
+      "weight": 1.0,
+      "_src": "product_level_decisions_viability",
+      "_tgt": "product_level_decisions_feasibility",
+      "source": "product_level_decisions_viability",
+      "target": "product_level_decisions_feasibility"
     }
   ],
   "hyperedges": [
     {
-      "id": "removed_topics_hyperedge_day2_prioritisation_swap",
-      "label": "Day 2 prioritisation model swap: RICE dropped, MoSCoW + heatmap adopted",
-      "members": [
-        "removed_topics_rice_prioritisation",
-        "removed_topics_moscow",
-        "removed_topics_value_complexity_heatmap",
-        "removed_topics_day2_rewrite"
-      ],
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "REMOVED_TOPICS.md"
-    },
-    {
-      "id": "removed_topics_hyperedge_kano_coverage",
-      "label": "Kano model/survey coverage split across Day 2 and Day 3",
-      "members": [
-        "removed_topics_kano_model_day2",
-        "removed_topics_kano_survey_walkthrough",
-        "removed_topics_duplicate_kano_cards_removed",
-        "removed_topics_day3_rewrite"
-      ],
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "REMOVED_TOPICS.md"
-    },
-    {
-      "id": "removed_topics_hyperedge_day3_exclusions",
-      "label": "Day 3 deliberate exclusions: proprietary/admin content replaced by generic teaching material",
-      "members": [
-        "removed_topics_internal_roadmap_screenshots",
-        "removed_topics_roadmaps_section_template",
-        "removed_topics_bill_payment_example_genericised",
-        "removed_topics_course_admin_excluded"
-      ],
+      "id": "product_flywheel_tradeoff_triad",
+      "relation": "conceptually_related_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "REMOVED_TOPICS.md"
+      "source_file": "src/assets/product-flywheel.png",
+      "description": "Three interdependent product tradeoff levers balanced around a shared flywheel",
+      "nodes": [
+        "product_flywheel_features",
+        "product_flywheel_deliverydate",
+        "product_flywheel_quality"
+      ],
+      "label": "Three interdependent product tradeoff levers balanced around a shared flywheel"
+    },
+    {
+      "id": "product_level_decisions_triad",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/assets/product-level-decisions.png",
+      "description": "Three overlapping lenses (customer, business, technology+people) that together define product-level decisions",
+      "nodes": [
+        "product_level_decisions_desirability",
+        "product_level_decisions_viability",
+        "product_level_decisions_feasibility"
+      ],
+      "label": "Three overlapping lenses (customer, business, technology+people) that together define product-level decisions"
     }
   ]
 }

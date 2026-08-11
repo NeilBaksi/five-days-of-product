@@ -2,7 +2,8 @@ import { useParams, Navigate } from 'react-router-dom'
 import { PageHeader, Section, Reveal, PrevNextPager } from '../components/layout'
 import { LearningObjectives, KeyTakeaways, AttributionFooter } from '../components/ui'
 import { getDay } from '../data/days'
-import { NAV, DAY_COUNT } from '../data/nav'
+import { DAY_COUNT } from '../data/nav'
+import { pager } from '../lib/pager'
 import { renderBlock } from './blocks'
 
 /** One data-driven template renders all five day pages. */
@@ -13,14 +14,9 @@ export function Day() {
 
   if (!day) return <Navigate to="/" replace />
 
-  const prev =
-    day.n === 1
-      ? { to: '/frameworks', label: 'Frameworks' }
-      : { to: `/day/${day.n - 1}`, label: dayLabel(day.n - 1) }
-  const next =
-    day.n === DAY_COUNT
-      ? { to: '/', label: 'Back to overview' }
-      : { to: `/day/${day.n + 1}`, label: dayLabel(day.n + 1) }
+  const { prev, next: nextInChain } = pager(`/day/${day.n}`)
+  // Day 5 is the tail of NAV — loop back so the site never dead-ends.
+  const next = day.n === DAY_COUNT ? { to: '/', label: 'Back to overview' } : nextInChain
 
   return (
     <>
@@ -65,9 +61,4 @@ export function Day() {
       <PrevNextPager prev={prev} next={next} />
     </>
   )
-}
-
-function dayLabel(n: number): string {
-  const item = NAV.find((i) => i.to === `/day/${n}`)
-  return item?.label ?? `Day ${n}`
 }

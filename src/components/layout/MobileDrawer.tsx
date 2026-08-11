@@ -61,7 +61,7 @@ export function MobileDrawer({ open, onClose }: MobileDrawerProps) {
                 <X size={22} aria-hidden />
               </button>
             </div>
-            <nav aria-label="Course sections" className="flex-1 overflow-y-auto px-4 pb-6">
+            <nav aria-label="Site sections" className="flex-1 overflow-y-auto px-4 pb-6">
               <NavLinks layoutId="mobile-nav-active" onNavigate={onClose} />
             </nav>
           </motion.div>

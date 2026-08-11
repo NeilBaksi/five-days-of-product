@@ -1,87 +1,97 @@
-# Graph Report - .  (2026-08-10)
+# Graph Report - .  (2026-08-11)
 
 ## Corpus Check
-- 29 files · ~0 words
+- 79 files · ~70,807 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 145 nodes · 81 edges · 72 communities detected
-- Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.71)
+- 167 nodes · 99 edges · 82 communities detected
+- Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 9 edges (avg confidence: 0.7)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_Build & Deploy Stack|Build & Deploy Stack]]
-- [[_COMMUNITY_Day 1-2 Rewrite Log|Day 1-2 Rewrite Log]]
-- [[_COMMUNITY_Day 3 Rewrite Log|Day 3 Rewrite Log]]
-- [[_COMMUNITY_Day 3 Exclusions & Sources|Day 3 Exclusions & Sources]]
+- [[_COMMUNITY_Removed Topics Ledger|Removed Topics Ledger]]
+- [[_COMMUNITY_Stack & Deployment Docs|Stack & Deployment Docs]]
+- [[_COMMUNITY_Day 1 Product Diagrams|Day 1 Product Diagrams]]
+- [[_COMMUNITY_Excluded Source Material|Excluded Source Material]]
 - [[_COMMUNITY_Content-as-Data Files|Content-as-Data Files]]
-- [[_COMMUNITY_Design System Brief|Design System Brief]]
-- [[_COMMUNITY_QuoteBank Component|QuoteBank Component]]
-- [[_COMMUNITY_OpportunityChart Component|OpportunityChart Component]]
-- [[_COMMUNITY_App Root Component|App Root Component]]
-- [[_COMMUNITY_ValueQuadrant Component|ValueQuadrant Component]]
-- [[_COMMUNITY_CompetencyColumns Component|CompetencyColumns Component]]
-- [[_COMMUNITY_DotPattern Component|DotPattern Component]]
-- [[_COMMUNITY_DebateCallout Component|DebateCallout Component]]
-- [[_COMMUNITY_LearningObjectives Component|LearningObjectives Component]]
-- [[_COMMUNITY_Formula Component|Formula Component]]
-- [[_COMMUNITY_Placeholder Component|Placeholder Component]]
-- [[_COMMUNITY_Triad Component|Triad Component]]
-- [[_COMMUNITY_KeyTakeaways Component|KeyTakeaways Component]]
-- [[_COMMUNITY_Badge Component|Badge Component]]
-- [[_COMMUNITY_AttributionFooter Component|AttributionFooter Component]]
-- [[_COMMUNITY_Callout Component|Callout Component]]
-- [[_COMMUNITY_RoadmapStepper Component|RoadmapStepper Component]]
-- [[_COMMUNITY_PageTransition Component|PageTransition Component]]
-- [[_COMMUNITY_PageHeader Component|PageHeader Component]]
-- [[_COMMUNITY_MobileHeader Component|MobileHeader Component]]
-- [[_COMMUNITY_Sidebar Component|Sidebar Component]]
-- [[_COMMUNITY_SidebarLayout Component|SidebarLayout Component]]
-- [[_COMMUNITY_Reveal Animation Wrapper|Reveal Animation Wrapper]]
-- [[_COMMUNITY_Lock Body Scroll Hook|Lock Body Scroll Hook]]
+- [[_COMMUNITY_Design Brief & Palette|Design Brief & Palette]]
+- [[_COMMUNITY_Quote Bank Carousel|Quote Bank Carousel]]
+- [[_COMMUNITY_Opportunity Chart Plotting|Opportunity Chart Plotting]]
+- [[_COMMUNITY_App Router Shell|App Router Shell]]
+- [[_COMMUNITY_Value Quadrant|Value Quadrant]]
+- [[_COMMUNITY_Competency Columns|Competency Columns]]
+- [[_COMMUNITY_Dot Pattern|Dot Pattern]]
+- [[_COMMUNITY_Debate Callout|Debate Callout]]
+- [[_COMMUNITY_Learning Objectives|Learning Objectives]]
+- [[_COMMUNITY_Formula Block|Formula Block]]
+- [[_COMMUNITY_Placeholder Marker|Placeholder Marker]]
+- [[_COMMUNITY_Triad Diagram|Triad Diagram]]
+- [[_COMMUNITY_Key Takeaways|Key Takeaways]]
+- [[_COMMUNITY_Badge Pill|Badge Pill]]
+- [[_COMMUNITY_Attribution Footer|Attribution Footer]]
+- [[_COMMUNITY_Callout Panel|Callout Panel]]
+- [[_COMMUNITY_Roadmap Stepper|Roadmap Stepper]]
+- [[_COMMUNITY_Page Transition|Page Transition]]
+- [[_COMMUNITY_Page Header|Page Header]]
+- [[_COMMUNITY_Mobile Header|Mobile Header]]
+- [[_COMMUNITY_Desktop Sidebar|Desktop Sidebar]]
+- [[_COMMUNITY_Sidebar Layout Shell|Sidebar Layout Shell]]
+- [[_COMMUNITY_Scroll Reveal|Scroll Reveal]]
+- [[_COMMUNITY_Body Scroll Lock|Body Scroll Lock]]
 - [[_COMMUNITY_Focus Trap Hook|Focus Trap Hook]]
-- [[_COMMUNITY_getDay Data Accessor|getDay Data Accessor]]
-- [[_COMMUNITY_PersonaCard Component|PersonaCard Component]]
-- [[_COMMUNITY_RoadmapCycle Component|RoadmapCycle Component]]
-- [[_COMMUNITY_MoscowRings Component|MoscowRings Component]]
-- [[_COMMUNITY_Tailwind Config|Tailwind Config]]
-- [[_COMMUNITY_Vite Config|Vite Config]]
-- [[_COMMUNITY_PostCSS Config|PostCSS Config]]
-- [[_COMMUNITY_App Entry Point|App Entry Point]]
-- [[_COMMUNITY_UI Barrel Export|UI Barrel Export]]
-- [[_COMMUNITY_StepList Component|StepList Component]]
-- [[_COMMUNITY_PullQuote Component|PullQuote Component]]
-- [[_COMMUNITY_Card Component|Card Component]]
-- [[_COMMUNITY_Accordion Component|Accordion Component]]
-- [[_COMMUNITY_StoryCards Component|StoryCards Component]]
-- [[_COMMUNITY_PressureDiagram Component|PressureDiagram Component]]
-- [[_COMMUNITY_Spectrum Component|Spectrum Component]]
-- [[_COMMUNITY_FrameworkTable Component|FrameworkTable Component]]
-- [[_COMMUNITY_UI Barrel Export|UI Barrel Export]]
-- [[_COMMUNITY_Button Component|Button Component]]
-- [[_COMMUNITY_GoodBadList Component|GoodBadList Component]]
-- [[_COMMUNITY_NavLinks Component|NavLinks Component]]
-- [[_COMMUNITY_PrevNextPager Component|PrevNextPager Component]]
-- [[_COMMUNITY_Section Component|Section Component]]
-- [[_COMMUNITY_MobileDrawer Component|MobileDrawer Component]]
-- [[_COMMUNITY_Layout Barrel Export|Layout Barrel Export]]
-- [[_COMMUNITY_Accent Palette Data|Accent Palette Data]]
-- [[_COMMUNITY_Frameworks Data|Frameworks Data]]
-- [[_COMMUNITY_Nav Data|Nav Data]]
-- [[_COMMUNITY_Landing Page Data|Landing Page Data]]
-- [[_COMMUNITY_Block Renderer|Block Renderer]]
-- [[_COMMUNITY_Day Page Template|Day Page Template]]
-- [[_COMMUNITY_Frameworks Page|Frameworks Page]]
-- [[_COMMUNITY_Landing Page|Landing Page]]
-- [[_COMMUNITY_Favicon Asset|Favicon Asset]]
+- [[_COMMUNITY_Day Content Lookup|Day Content Lookup]]
+- [[_COMMUNITY_Persona Card|Persona Card]]
+- [[_COMMUNITY_Roadmap Cycle|Roadmap Cycle]]
+- [[_COMMUNITY_MoSCoW Rings|MoSCoW Rings]]
+- [[_COMMUNITY_Abstract vs Concrete Diagram|Abstract vs Concrete Diagram]]
+- [[_COMMUNITY_Copy to Clipboard|Copy to Clipboard]]
+- [[_COMMUNITY_Site Pager Chain|Site Pager Chain]]
+- [[_COMMUNITY_Prompt Placeholder Highlighting|Prompt Placeholder Highlighting]]
+- [[_COMMUNITY_tailwind.config.ts|tailwind.config.ts]]
+- [[_COMMUNITY_vite.config.ts|vite.config.ts]]
+- [[_COMMUNITY_postcss.config.js|postcss.config.js]]
+- [[_COMMUNITY_main.tsx|main.tsx]]
+- [[_COMMUNITY_index.ts|index.ts]]
+- [[_COMMUNITY_StepList.tsx|StepList.tsx]]
+- [[_COMMUNITY_PullQuote.tsx|PullQuote.tsx]]
+- [[_COMMUNITY_Card.tsx|Card.tsx]]
+- [[_COMMUNITY_Accordion.tsx|Accordion.tsx]]
+- [[_COMMUNITY_StoryCards.tsx|StoryCards.tsx]]
+- [[_COMMUNITY_PressureDiagram.tsx|PressureDiagram.tsx]]
+- [[_COMMUNITY_Spectrum.tsx|Spectrum.tsx]]
+- [[_COMMUNITY_FrameworkTable.tsx|FrameworkTable.tsx]]
+- [[_COMMUNITY_index.ts|index.ts]]
+- [[_COMMUNITY_Button.tsx|Button.tsx]]
+- [[_COMMUNITY_GoodBadList.tsx|GoodBadList.tsx]]
+- [[_COMMUNITY_NavLinks.tsx|NavLinks.tsx]]
+- [[_COMMUNITY_PrevNextPager.tsx|PrevNextPager.tsx]]
+- [[_COMMUNITY_Section.tsx|Section.tsx]]
+- [[_COMMUNITY_MobileDrawer.tsx|MobileDrawer.tsx]]
+- [[_COMMUNITY_index.ts|index.ts]]
+- [[_COMMUNITY_accents.ts|accents.ts]]
+- [[_COMMUNITY_frameworks.ts|frameworks.ts]]
+- [[_COMMUNITY_nav.ts|nav.ts]]
+- [[_COMMUNITY_landing.ts|landing.ts]]
+- [[_COMMUNITY_blocks.tsx|blocks.tsx]]
+- [[_COMMUNITY_Day.tsx|Day.tsx]]
+- [[_COMMUNITY_Frameworks.tsx|Frameworks.tsx]]
+- [[_COMMUNITY_Landing.tsx|Landing.tsx]]
+- [[_COMMUNITY_Inline SVG Favicon|Inline SVG Favicon]]
 - [[_COMMUNITY_Meta Description|Meta Description]]
-- [[_COMMUNITY_Open Graph Tags|Open Graph Tags]]
+- [[_COMMUNITY_Open Graph Meta Tags|Open Graph Meta Tags]]
 - [[_COMMUNITY_Page Title|Page Title]]
-- [[_COMMUNITY_StrategyStack Component|StrategyStack Component]]
-- [[_COMMUNITY_KanoCurve Component|KanoCurve Component]]
-- [[_COMMUNITY_ConcretenessLadder Component|ConcretenessLadder Component]]
-- [[_COMMUNITY_PriorityMatrix Component|PriorityMatrix Component]]
-- [[_COMMUNITY_CompetencyWheel Component|CompetencyWheel Component]]
+- [[_COMMUNITY_StrategyStack.tsx|StrategyStack.tsx]]
+- [[_COMMUNITY_KanoCurve.tsx|KanoCurve.tsx]]
+- [[_COMMUNITY_ConcretenessLadder.tsx|ConcretenessLadder.tsx]]
+- [[_COMMUNITY_PriorityMatrix.tsx|PriorityMatrix.tsx]]
+- [[_COMMUNITY_CompetencyWheel.tsx|CompetencyWheel.tsx]]
+- [[_COMMUNITY_glossary.ts|glossary.ts]]
+- [[_COMMUNITY_prompts.ts|prompts.ts]]
+- [[_COMMUNITY_toolkit.ts|toolkit.ts]]
+- [[_COMMUNITY_Templates.tsx|Templates.tsx]]
+- [[_COMMUNITY_ProductSense.tsx|ProductSense.tsx]]
+- [[_COMMUNITY_Glossary.tsx|Glossary.tsx]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Five Days of Product (Project)` - 9 edges
@@ -90,10 +100,10 @@
 4. `Day 1 rewrite (2026-08-07)` - 5 edges
 5. `Main Script Entry (/src/main.tsx)` - 4 edges
 6. `Content-as-Data Pattern (src/data)` - 4 edges
-7. `Design Brief (.impeccable.md)` - 3 edges
-8. `Removed/Not-Yet-Covered Topics tracking file` - 3 edges
-9. `Double Diamond framework (Discover-Define-Develop-Deliver)` - 3 edges
-10. `Running a JTBD interview - practical steps (Recruit-Interview-Synthesise)` - 3 edges
+7. `Product Flywheel diagram (Features / Delivery date / Quality)` - 4 edges
+8. `Quality - How good it is` - 4 edges
+9. `Product-Level Decisions Venn diagram (Desirability / Viability / Feasibility)` - 4 edges
+10. `Feasibility - Can we build and support it? (technology + people)` - 4 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Main Script Entry (/src/main.tsx)` --conceptually_related_to--> `React 19`  [INFERRED]
@@ -104,27 +114,28 @@
   index.html → README.md
 - `Google Fonts Import (Philosopher, Mulish, JetBrains Mono)` --references--> `Design Brief (.impeccable.md)`  [INFERRED]
   index.html → README.md
+- `Product Flywheel diagram (Features / Delivery date / Quality)` --semantically_similar_to--> `Product-Level Decisions Venn diagram (Desirability / Viability / Feasibility)`  [INFERRED] [semantically similar]
+  src/assets/product-flywheel.png → src/assets/product-level-decisions.png
 
 ## Hyperedges (group relationships)
-- **Day 2 prioritisation model swap: RICE dropped, MoSCoW + heatmap adopted** —  [INFERRED 0.85]
-- **Kano model/survey coverage split across Day 2 and Day 3** —  [INFERRED 0.80]
-- **Day 3 deliberate exclusions: proprietary/admin content replaced by generic teaching material** —  [EXTRACTED 1.00]
+- **Three interdependent product tradeoff levers balanced around a shared flywheel** — product_flywheel_features, product_flywheel_deliverydate, product_flywheel_quality [EXTRACTED 1.00]
+- **Three overlapping lenses (customer, business, technology+people) that together define product-level decisions** — product_level_decisions_desirability, product_level_decisions_viability, product_level_decisions_feasibility [EXTRACTED 1.00]
 
 ## Communities
 
-### Community 0 - "Build & Deploy Stack"
+### Community 0 - "Removed Topics Ledger"
+Cohesion: 0.13
+Nodes (19): Day 1 rewrite (2026-08-07), Day 2 rewrite (2026-08-08), Day 3 rewrite (2026-08-10), Day 3 title change: 'From Idea to Launch Plan' -> 'Design & Solution', Days 3-5 scaffold placeholders untouched note, Discovery/Definition/Delivery three-phase framing, Double Diamond framework (Discover-Define-Develop-Deliver), Duplicate Kano cards block removed (no loss) (+11 more)
+
+### Community 1 - "Stack & Deployment Docs"
 Cohesion: 0.18
 Nodes (13): Main Script Entry (/src/main.tsx), Root Div (#root), deploy.yml (GitHub Actions), framer-motion, GitHub Pages Deployment, Live Site (GitHub Pages), lucide-react, Five Days of Product (Project) (+5 more)
 
-### Community 1 - "Day 1-2 Rewrite Log"
-Cohesion: 0.22
-Nodes (11): Day 1 rewrite (2026-08-07), Day 2 rewrite (2026-08-08), Days 3-5 scaffold placeholders untouched note, Discovery/Definition/Delivery three-phase framing, Double Diamond framework (Discover-Define-Develop-Deliver), src/data/frameworks.ts (double-diamond id entry), Running a JTBD interview - practical steps (Recruit-Interview-Synthesise), MoSCoW prioritisation (Day 2 real content) (+3 more)
+### Community 2 - "Day 1 Product Diagrams"
+Cohesion: 0.5
+Nodes (8): Delivery date - How fast it ships, Product Flywheel diagram (Features / Delivery date / Quality), Features - How much it does, Quality - How good it is, Desirability - Do people actually want this? (customer), Product-Level Decisions Venn diagram (Desirability / Viability / Feasibility), Feasibility - Can we build and support it? (technology + people), Viability - Does it work commercially for us? (business)
 
-### Community 2 - "Day 3 Rewrite Log"
-Cohesion: 0.29
-Nodes (8): Day 3 rewrite (2026-08-10), Day 3 title change: 'From Idea to Launch Plan' -> 'Design & Solution', Duplicate Kano cards block removed (no loss), Gold-plating warning callout, Kano model (5-category cards + curve, taught on Day 2 ideation), Kano survey walkthrough (methodology, never written), nav.ts (Day 3 label update), Storyboarding and story mapping
-
-### Community 3 - "Day 3 Exclusions & Sources"
+### Community 3 - "Excluded Source Material"
 Cohesion: 0.29
 Nodes (7): Bill-payment worked example, genericised persona, Syndicate assignment logistics, deliverables, grading rubric (course admin, excluded), Desirability/viability/feasibility pyramid (Day 1 recap only, compact triad), Excluded from source Day 3 material (deliberate, not placeholders), Instructor contact details and handoff slide (excluded), Internal company roadmap screenshots (proprietary, excluded), Generic Strategic Theme -> Quarterly OKRs -> features template (roadmaps section)
 
@@ -132,99 +143,99 @@ Nodes (7): Bill-payment worked example, genericised persona, Syndicate assignmen
 Cohesion: 0.4
 Nodes (5): Content-as-Data Pattern (src/data), days.ts, frameworks.ts, nav.ts, Placeholder Component
 
-### Community 5 - "Design System Brief"
+### Community 5 - "Design Brief & Palette"
 Cohesion: 0.5
 Nodes (4): Google Fonts Import (Philosopher, Mulish, JetBrains Mono), Design Brief (.impeccable.md), Academic-Corporate OKLCH Palette, WCAG 2.1 AA Baseline
 
-### Community 6 - "QuoteBank Component"
+### Community 6 - "Quote Bank Carousel"
 Cohesion: 0.5
 Nodes (0): 
 
-### Community 7 - "OpportunityChart Component"
+### Community 7 - "Opportunity Chart Plotting"
 Cohesion: 0.67
 Nodes (0): 
 
-### Community 8 - "App Root Component"
+### Community 8 - "App Router Shell"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 9 - "ValueQuadrant Component"
+### Community 9 - "Value Quadrant"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 10 - "CompetencyColumns Component"
+### Community 10 - "Competency Columns"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 11 - "DotPattern Component"
+### Community 11 - "Dot Pattern"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 12 - "DebateCallout Component"
+### Community 12 - "Debate Callout"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 13 - "LearningObjectives Component"
+### Community 13 - "Learning Objectives"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 14 - "Formula Component"
+### Community 14 - "Formula Block"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 15 - "Placeholder Component"
+### Community 15 - "Placeholder Marker"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 16 - "Triad Component"
+### Community 16 - "Triad Diagram"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 17 - "KeyTakeaways Component"
+### Community 17 - "Key Takeaways"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 18 - "Badge Component"
+### Community 18 - "Badge Pill"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 19 - "AttributionFooter Component"
+### Community 19 - "Attribution Footer"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 20 - "Callout Component"
+### Community 20 - "Callout Panel"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 21 - "RoadmapStepper Component"
+### Community 21 - "Roadmap Stepper"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 22 - "PageTransition Component"
+### Community 22 - "Page Transition"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 23 - "PageHeader Component"
+### Community 23 - "Page Header"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 24 - "MobileHeader Component"
+### Community 24 - "Mobile Header"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 25 - "Sidebar Component"
+### Community 25 - "Desktop Sidebar"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 26 - "SidebarLayout Component"
+### Community 26 - "Sidebar Layout Shell"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 27 - "Reveal Animation Wrapper"
+### Community 27 - "Scroll Reveal"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 28 - "Lock Body Scroll Hook"
+### Community 28 - "Body Scroll Lock"
 Cohesion: 1.0
 Nodes (0): 
 
@@ -232,316 +243,376 @@ Nodes (0):
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 30 - "getDay Data Accessor"
+### Community 30 - "Day Content Lookup"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 31 - "PersonaCard Component"
+### Community 31 - "Persona Card"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 32 - "RoadmapCycle Component"
+### Community 32 - "Roadmap Cycle"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 33 - "MoscowRings Component"
+### Community 33 - "MoSCoW Rings"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 34 - "Tailwind Config"
+### Community 34 - "Abstract vs Concrete Diagram"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 35 - "Vite Config"
+### Community 35 - "Copy to Clipboard"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 36 - "PostCSS Config"
+### Community 36 - "Site Pager Chain"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 37 - "App Entry Point"
+### Community 37 - "Prompt Placeholder Highlighting"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 38 - "UI Barrel Export"
+### Community 38 - "tailwind.config.ts"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 39 - "StepList Component"
+### Community 39 - "vite.config.ts"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 40 - "PullQuote Component"
+### Community 40 - "postcss.config.js"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 41 - "Card Component"
+### Community 41 - "main.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 42 - "Accordion Component"
+### Community 42 - "index.ts"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 43 - "StoryCards Component"
+### Community 43 - "StepList.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 44 - "PressureDiagram Component"
+### Community 44 - "PullQuote.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 45 - "Spectrum Component"
+### Community 45 - "Card.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 46 - "FrameworkTable Component"
+### Community 46 - "Accordion.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 47 - "UI Barrel Export"
+### Community 47 - "StoryCards.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 48 - "Button Component"
+### Community 48 - "PressureDiagram.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 49 - "GoodBadList Component"
+### Community 49 - "Spectrum.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 50 - "NavLinks Component"
+### Community 50 - "FrameworkTable.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 51 - "PrevNextPager Component"
+### Community 51 - "index.ts"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 52 - "Section Component"
+### Community 52 - "Button.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 53 - "MobileDrawer Component"
+### Community 53 - "GoodBadList.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 54 - "Layout Barrel Export"
+### Community 54 - "NavLinks.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 55 - "Accent Palette Data"
+### Community 55 - "PrevNextPager.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 56 - "Frameworks Data"
+### Community 56 - "Section.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 57 - "Nav Data"
+### Community 57 - "MobileDrawer.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 58 - "Landing Page Data"
+### Community 58 - "index.ts"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 59 - "Block Renderer"
+### Community 59 - "accents.ts"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 60 - "Day Page Template"
+### Community 60 - "frameworks.ts"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 61 - "Frameworks Page"
+### Community 61 - "nav.ts"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 62 - "Landing Page"
+### Community 62 - "landing.ts"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 63 - "Favicon Asset"
+### Community 63 - "blocks.tsx"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 64 - "Day.tsx"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 65 - "Frameworks.tsx"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 66 - "Landing.tsx"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 67 - "Inline SVG Favicon"
 Cohesion: 1.0
 Nodes (1): Inline SVG Favicon
 
-### Community 64 - "Meta Description"
+### Community 68 - "Meta Description"
 Cohesion: 1.0
 Nodes (1): Meta Description
 
-### Community 65 - "Open Graph Tags"
+### Community 69 - "Open Graph Meta Tags"
 Cohesion: 1.0
 Nodes (1): Open Graph Meta Tags
 
-### Community 66 - "Page Title"
+### Community 70 - "Page Title"
 Cohesion: 1.0
 Nodes (1): Page Title
 
-### Community 67 - "StrategyStack Component"
+### Community 71 - "StrategyStack.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 68 - "KanoCurve Component"
+### Community 72 - "KanoCurve.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 69 - "ConcretenessLadder Component"
+### Community 73 - "ConcretenessLadder.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 70 - "PriorityMatrix Component"
+### Community 74 - "PriorityMatrix.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 71 - "CompetencyWheel Component"
+### Community 75 - "CompetencyWheel.tsx"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 76 - "glossary.ts"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 77 - "prompts.ts"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 78 - "toolkit.ts"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 79 - "Templates.tsx"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 80 - "ProductSense.tsx"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 81 - "Glossary.tsx"
 Cohesion: 1.0
 Nodes (0): 
 
 ## Knowledge Gaps
 - **30 isolated node(s):** `Root Div (#root)`, `Inline SVG Favicon`, `Meta Description`, `Open Graph Meta Tags`, `Google Fonts Import (Philosopher, Mulish, JetBrains Mono)` (+25 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **Thin community `App Root Component`** (2 nodes): `App()`, `App.tsx`
+- **Thin community `App Router Shell`** (2 nodes): `App()`, `App.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `ValueQuadrant Component`** (2 nodes): `ValueQuadrant.tsx`, `ValueQuadrant()`
+- **Thin community `Value Quadrant`** (2 nodes): `ValueQuadrant.tsx`, `ValueQuadrant()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `CompetencyColumns Component`** (2 nodes): `clsx()`, `CompetencyColumns.tsx`
+- **Thin community `Competency Columns`** (2 nodes): `clsx()`, `CompetencyColumns.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `DotPattern Component`** (2 nodes): `DotPattern()`, `DotPattern.tsx`
+- **Thin community `Dot Pattern`** (2 nodes): `DotPattern()`, `DotPattern.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `DebateCallout Component`** (2 nodes): `DebateCallout()`, `DebateCallout.tsx`
+- **Thin community `Debate Callout`** (2 nodes): `DebateCallout()`, `DebateCallout.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `LearningObjectives Component`** (2 nodes): `LearningObjectives()`, `LearningObjectives.tsx`
+- **Thin community `Learning Objectives`** (2 nodes): `LearningObjectives()`, `LearningObjectives.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Formula Component`** (2 nodes): `Formula()`, `Formula.tsx`
+- **Thin community `Formula Block`** (2 nodes): `Formula()`, `Formula.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Placeholder Component`** (2 nodes): `Placeholder()`, `Placeholder.tsx`
+- **Thin community `Placeholder Marker`** (2 nodes): `Placeholder()`, `Placeholder.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Triad Component`** (2 nodes): `Triad.tsx`, `Triad()`
+- **Thin community `Triad Diagram`** (2 nodes): `Triad.tsx`, `Triad()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `KeyTakeaways Component`** (2 nodes): `KeyTakeaways()`, `KeyTakeaways.tsx`
+- **Thin community `Key Takeaways`** (2 nodes): `KeyTakeaways()`, `KeyTakeaways.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Badge Component`** (2 nodes): `Badge()`, `Badge.tsx`
+- **Thin community `Badge Pill`** (2 nodes): `Badge()`, `Badge.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `AttributionFooter Component`** (2 nodes): `AttributionFooter()`, `AttributionFooter.tsx`
+- **Thin community `Attribution Footer`** (2 nodes): `AttributionFooter()`, `AttributionFooter.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Callout Component`** (2 nodes): `Callout()`, `Callout.tsx`
+- **Thin community `Callout Panel`** (2 nodes): `Callout()`, `Callout.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `RoadmapStepper Component`** (2 nodes): `RoadmapStepper()`, `RoadmapStepper.tsx`
+- **Thin community `Roadmap Stepper`** (2 nodes): `RoadmapStepper()`, `RoadmapStepper.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `PageTransition Component`** (2 nodes): `PageTransition()`, `PageTransition.tsx`
+- **Thin community `Page Transition`** (2 nodes): `PageTransition()`, `PageTransition.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `PageHeader Component`** (2 nodes): `PageHeader()`, `PageHeader.tsx`
+- **Thin community `Page Header`** (2 nodes): `PageHeader()`, `PageHeader.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `MobileHeader Component`** (2 nodes): `MobileHeader()`, `MobileHeader.tsx`
+- **Thin community `Mobile Header`** (2 nodes): `MobileHeader()`, `MobileHeader.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Sidebar Component`** (2 nodes): `Sidebar()`, `Sidebar.tsx`
+- **Thin community `Desktop Sidebar`** (2 nodes): `Sidebar()`, `Sidebar.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `SidebarLayout Component`** (2 nodes): `SidebarLayout()`, `SidebarLayout.tsx`
+- **Thin community `Sidebar Layout Shell`** (2 nodes): `SidebarLayout()`, `SidebarLayout.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Reveal Animation Wrapper`** (2 nodes): `Reveal()`, `Reveal.tsx`
+- **Thin community `Scroll Reveal`** (2 nodes): `Reveal()`, `Reveal.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Lock Body Scroll Hook`** (2 nodes): `useLockBodyScroll.ts`, `useLockBodyScroll()`
+- **Thin community `Body Scroll Lock`** (2 nodes): `useLockBodyScroll.ts`, `useLockBodyScroll()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Focus Trap Hook`** (2 nodes): `useFocusTrap.ts`, `useFocusTrap()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `getDay Data Accessor`** (2 nodes): `getDay()`, `days.ts`
+- **Thin community `Day Content Lookup`** (2 nodes): `getDay()`, `days.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `PersonaCard Component`** (2 nodes): `PersonaCard()`, `PersonaCard.tsx`
+- **Thin community `Persona Card`** (2 nodes): `PersonaCard()`, `PersonaCard.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `RoadmapCycle Component`** (2 nodes): `pad()`, `RoadmapCycle.tsx`
+- **Thin community `Roadmap Cycle`** (2 nodes): `pad()`, `RoadmapCycle.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `MoscowRings Component`** (2 nodes): `MoscowRings()`, `MoscowRings.tsx`
+- **Thin community `MoSCoW Rings`** (2 nodes): `MoscowRings()`, `MoscowRings.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Tailwind Config`** (1 nodes): `tailwind.config.ts`
+- **Thin community `Abstract vs Concrete Diagram`** (2 nodes): `AbstractConcrete()`, `AbstractConcrete.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Vite Config`** (1 nodes): `vite.config.ts`
+- **Thin community `Copy to Clipboard`** (2 nodes): `handleClick()`, `CopyButton.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `PostCSS Config`** (1 nodes): `postcss.config.js`
+- **Thin community `Site Pager Chain`** (2 nodes): `pager()`, `pager.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `App Entry Point`** (1 nodes): `main.tsx`
+- **Thin community `Prompt Placeholder Highlighting`** (2 nodes): `highlight()`, `PromptLibrary.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `UI Barrel Export`** (1 nodes): `index.ts`
+- **Thin community `tailwind.config.ts`** (1 nodes): `tailwind.config.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `StepList Component`** (1 nodes): `StepList.tsx`
+- **Thin community `vite.config.ts`** (1 nodes): `vite.config.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `PullQuote Component`** (1 nodes): `PullQuote.tsx`
+- **Thin community `postcss.config.js`** (1 nodes): `postcss.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Card Component`** (1 nodes): `Card.tsx`
+- **Thin community `main.tsx`** (1 nodes): `main.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Accordion Component`** (1 nodes): `Accordion.tsx`
+- **Thin community `index.ts`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `StoryCards Component`** (1 nodes): `StoryCards.tsx`
+- **Thin community `StepList.tsx`** (1 nodes): `StepList.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `PressureDiagram Component`** (1 nodes): `PressureDiagram.tsx`
+- **Thin community `PullQuote.tsx`** (1 nodes): `PullQuote.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Spectrum Component`** (1 nodes): `Spectrum.tsx`
+- **Thin community `Card.tsx`** (1 nodes): `Card.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `FrameworkTable Component`** (1 nodes): `FrameworkTable.tsx`
+- **Thin community `Accordion.tsx`** (1 nodes): `Accordion.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `UI Barrel Export`** (1 nodes): `index.ts`
+- **Thin community `StoryCards.tsx`** (1 nodes): `StoryCards.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Button Component`** (1 nodes): `Button.tsx`
+- **Thin community `PressureDiagram.tsx`** (1 nodes): `PressureDiagram.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `GoodBadList Component`** (1 nodes): `GoodBadList.tsx`
+- **Thin community `Spectrum.tsx`** (1 nodes): `Spectrum.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `NavLinks Component`** (1 nodes): `NavLinks.tsx`
+- **Thin community `FrameworkTable.tsx`** (1 nodes): `FrameworkTable.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `PrevNextPager Component`** (1 nodes): `PrevNextPager.tsx`
+- **Thin community `index.ts`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Section Component`** (1 nodes): `Section.tsx`
+- **Thin community `Button.tsx`** (1 nodes): `Button.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `MobileDrawer Component`** (1 nodes): `MobileDrawer.tsx`
+- **Thin community `GoodBadList.tsx`** (1 nodes): `GoodBadList.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Layout Barrel Export`** (1 nodes): `index.ts`
+- **Thin community `NavLinks.tsx`** (1 nodes): `NavLinks.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Accent Palette Data`** (1 nodes): `accents.ts`
+- **Thin community `PrevNextPager.tsx`** (1 nodes): `PrevNextPager.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Frameworks Data`** (1 nodes): `frameworks.ts`
+- **Thin community `Section.tsx`** (1 nodes): `Section.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Nav Data`** (1 nodes): `nav.ts`
+- **Thin community `MobileDrawer.tsx`** (1 nodes): `MobileDrawer.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Landing Page Data`** (1 nodes): `landing.ts`
+- **Thin community `index.ts`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Block Renderer`** (1 nodes): `blocks.tsx`
+- **Thin community `accents.ts`** (1 nodes): `accents.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Day Page Template`** (1 nodes): `Day.tsx`
+- **Thin community `frameworks.ts`** (1 nodes): `frameworks.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Frameworks Page`** (1 nodes): `Frameworks.tsx`
+- **Thin community `nav.ts`** (1 nodes): `nav.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Landing Page`** (1 nodes): `Landing.tsx`
+- **Thin community `landing.ts`** (1 nodes): `landing.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Favicon Asset`** (1 nodes): `Inline SVG Favicon`
+- **Thin community `blocks.tsx`** (1 nodes): `blocks.tsx`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Day.tsx`** (1 nodes): `Day.tsx`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Frameworks.tsx`** (1 nodes): `Frameworks.tsx`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Landing.tsx`** (1 nodes): `Landing.tsx`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Inline SVG Favicon`** (1 nodes): `Inline SVG Favicon`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Meta Description`** (1 nodes): `Meta Description`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Open Graph Tags`** (1 nodes): `Open Graph Meta Tags`
+- **Thin community `Open Graph Meta Tags`** (1 nodes): `Open Graph Meta Tags`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Page Title`** (1 nodes): `Page Title`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `StrategyStack Component`** (1 nodes): `StrategyStack.tsx`
+- **Thin community `StrategyStack.tsx`** (1 nodes): `StrategyStack.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `KanoCurve Component`** (1 nodes): `KanoCurve.tsx`
+- **Thin community `KanoCurve.tsx`** (1 nodes): `KanoCurve.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `ConcretenessLadder Component`** (1 nodes): `ConcretenessLadder.tsx`
+- **Thin community `ConcretenessLadder.tsx`** (1 nodes): `ConcretenessLadder.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `PriorityMatrix Component`** (1 nodes): `PriorityMatrix.tsx`
+- **Thin community `PriorityMatrix.tsx`** (1 nodes): `PriorityMatrix.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `CompetencyWheel Component`** (1 nodes): `CompetencyWheel.tsx`
+- **Thin community `CompetencyWheel.tsx`** (1 nodes): `CompetencyWheel.tsx`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `glossary.ts`** (1 nodes): `glossary.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `prompts.ts`** (1 nodes): `prompts.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `toolkit.ts`** (1 nodes): `toolkit.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Templates.tsx`** (1 nodes): `Templates.tsx`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `ProductSense.tsx`** (1 nodes): `ProductSense.tsx`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Glossary.tsx`** (1 nodes): `Glossary.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Day 3 rewrite (2026-08-10)` connect `Day 3 Rewrite Log` to `Day 1-2 Rewrite Log`, `Day 3 Exclusions & Sources`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **Why does `Excluded from source Day 3 material (deliberate, not placeholders)` connect `Day 3 Exclusions & Sources` to `Day 3 Rewrite Log`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
-- **Why does `Removed/Not-Yet-Covered Topics tracking file` connect `Day 1-2 Rewrite Log` to `Day 3 Rewrite Log`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
+- **Why does `Day 3 rewrite (2026-08-10)` connect `Removed Topics Ledger` to `Excluded Source Material`?**
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **Why does `Excluded from source Day 3 material (deliberate, not placeholders)` connect `Excluded Source Material` to `Removed Topics Ledger`?**
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `Main Script Entry (/src/main.tsx)` (e.g. with `React 19` and `TypeScript (strict)`) actually correct?**
   _`Main Script Entry (/src/main.tsx)` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `Root Div (#root)`, `Inline SVG Favicon`, `Meta Description` to the rest of the system?**
   _30 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Removed Topics Ledger` be split into smaller, more focused modules?**
+  _Cohesion score 0.13 - nodes in this community are weakly interconnected._
