@@ -354,9 +354,27 @@ export const GLOSSARY: GlossaryTerm[] = [
       'The percentage of new users who reach a meaningful “aha” moment early in their experience — a strong predictor of whether they’ll stick around.',
   },
   {
+    term: 'AOV (Average Order Value)',
+    category: 'Data & Metrics',
+    definition:
+      'The average amount a customer spends per order, calculated as total revenue divided by number of orders — a quick read on whether purchase size is growing or shrinking.',
+  },
+  {
+    term: 'ARPU (Average Revenue Per User)',
+    category: 'Data & Metrics',
+    definition:
+      'Total revenue divided by the number of active users over a given period — a rough measure of how much value each user generates, on average.',
+  },
+  {
     term: 'CAC (Customer Acquisition Cost)',
     category: 'Data & Metrics',
     definition: 'How much it costs, on average, to acquire one new paying customer, across all marketing and sales spend.',
+  },
+  {
+    term: 'CHS (Customer Health Score)',
+    category: 'Data & Metrics',
+    definition:
+      'A composite score — usually blending usage, engagement, and support signals — that estimates how likely a customer is to renew, expand, or churn.',
   },
   {
     term: 'Churn Rate',
@@ -371,6 +389,42 @@ export const GLOSSARY: GlossaryTerm[] = [
       'Grouping users by a shared starting point (like signup week) and tracking how their behaviour evolves over time, rather than looking at everyone as one blended average.',
   },
   {
+    term: 'Conversion Rate',
+    category: 'Data & Metrics',
+    definition:
+      'The percentage of people who complete a desired action — signing up, purchasing, upgrading — out of everyone who had the opportunity to.',
+  },
+  {
+    term: 'CPL (Cost Per Lead)',
+    category: 'Data & Metrics',
+    definition:
+      'How much it costs, on average, to generate one new lead through marketing spend — an earlier-funnel cousin of CAC, tracked before a lead ever becomes a paying customer.',
+  },
+  {
+    term: 'CSAT (Customer Satisfaction)',
+    category: 'Data & Metrics',
+    definition:
+      'A short-term satisfaction score gathered by asking users to rate a specific interaction or experience, typically on a simple numeric or star scale.',
+  },
+  {
+    term: 'DAU / MAU (Daily / Monthly Active Users)',
+    category: 'Data & Metrics',
+    definition:
+      'Counts of the unique users who engage with a product within a single day (DAU) or a rolling thirty-day window (MAU) — the baseline counts most other engagement metrics are built on.',
+  },
+  {
+    term: 'GMV (Gross Merchandise Volume)',
+    category: 'Data & Metrics',
+    definition:
+      'The total value of goods or services sold through a platform over a given period, before fees, discounts, or returns are deducted.',
+  },
+  {
+    term: 'Gross Margin',
+    category: 'Data & Metrics',
+    definition:
+      'The percentage of revenue left after subtracting the direct cost of delivering a product or service — a core signal of how profitable the underlying business actually is.',
+  },
+  {
     term: 'KPI (Key Performance Indicator)',
     category: 'Data & Metrics',
     definition: 'A specific, agreed metric used to track whether something important is on track, over time.',
@@ -380,6 +434,12 @@ export const GLOSSARY: GlossaryTerm[] = [
     category: 'Data & Metrics',
     definition:
       'The total revenue a business can expect from one customer over the entire time they stay a customer — usually compared directly against CAC to judge whether growth is actually profitable.',
+  },
+  {
+    term: 'NDR (Net Dollar Retention)',
+    category: 'Data & Metrics',
+    definition:
+      'The percentage change in recurring revenue from an existing group of customers over a period, factoring in expansion, downgrades, and churn — also called Net Revenue Retention. A figure above 100% means existing customers are growing revenue even before any new ones are added.',
   },
   {
     term: 'North Star Metric',
@@ -399,6 +459,23 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Retention Rate',
     category: 'Data & Metrics',
     definition: 'The percentage of users who keep coming back over a given period after they first arrive.',
+  },
+  {
+    term: 'Session Duration',
+    category: 'Data & Metrics',
+    definition: 'How long a user spends actively engaged in a single session with a product, from open to close or timeout.',
+  },
+  {
+    term: 'Stickiness (DAU/MAU Ratio)',
+    category: 'Data & Metrics',
+    definition:
+      'DAU divided by MAU, expressed as a percentage — a measure of what share of a product’s monthly users come back on any given day.',
+  },
+  {
+    term: 'Viral Coefficient',
+    category: 'Data & Metrics',
+    definition:
+      'The average number of new users each existing user brings in through referrals. Above 1.0, growth compounds on its own; below 1.0, it still needs other channels to sustain itself.',
   },
 
   // Product & Growth
