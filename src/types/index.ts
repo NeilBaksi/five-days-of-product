@@ -188,3 +188,27 @@ export interface SenseExercise {
   instruction: string
   questions: string[]
 }
+
+export interface PricingModel {
+  number: number
+  title: string
+  /** positioning tag after the em dash, e.g. "The Safe Default" */
+  tag: string
+  /** main philosophy/strategy line */
+  strategy: string
+  /** secondary explanatory line — mechanism, deciding factor, how it's actually done */
+  detail?: string
+  detailLabel?: string
+  formula?: { expression: string; note?: string }
+  pros: string
+  cons: string
+  /** "Where it shows up" / "Common in" / classic example pattern */
+  inPractice?: string
+  inPracticeLabel?: string
+  watchOut: string
+}
+
+export interface SaasPricingModel {
+  title: string
+  body: string
+}

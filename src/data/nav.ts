@@ -8,6 +8,7 @@ export const NAV: NavItem[] = [
   { to: '/toolkit/templates', label: 'Templates', index: 'T', group: 'toolkit' },
   { to: '/toolkit/prompts', label: 'Prompt Library', index: 'P', group: 'toolkit' },
   { to: '/toolkit/product-sense', label: 'Product Sense', index: 'S', group: 'toolkit' },
+  { to: '/toolkit/pricing', label: 'Pricing Models', index: '$', group: 'toolkit' },
   { to: '/day/1', label: 'Day 1 · Intro to PM', index: '01', group: 'day' },
   { to: '/day/2', label: 'Day 2 · Definition & Prioritisation', index: '02', group: 'day' },
   { to: '/day/3', label: 'Day 3 · Design & Solution', index: '03', group: 'day' },

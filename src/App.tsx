@@ -7,6 +7,7 @@ import { Glossary } from './pages/Glossary'
 import { Templates } from './pages/Templates'
 import { PromptLibrary } from './pages/PromptLibrary'
 import { ProductSense } from './pages/ProductSense'
+import { PricingModels } from './pages/PricingModels'
 
 export default function App() {
   const location = useLocation()
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/toolkit/templates" element={<Templates />} />
           <Route path="/toolkit/prompts" element={<PromptLibrary />} />
           <Route path="/toolkit/product-sense" element={<ProductSense />} />
+          <Route path="/toolkit/pricing" element={<PricingModels />} />
           <Route path="/day/:n" element={<Day />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
