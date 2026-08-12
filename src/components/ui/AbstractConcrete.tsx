@@ -10,30 +10,30 @@ export function AbstractConcrete({ left, right, center, caption }: AbstractConcr
   return (
     <div className="rounded-2xl border border-rule bg-surface p-6">
       {/* Desktop: two tinted columns joined by a centre badge */}
-      <svg viewBox="0 0 480 320" className="hidden w-full md:block" aria-hidden>
-        <rect x="16" y="16" width="200" height="288" rx="16" className="fill-blue-wash" />
-        <rect x="264" y="16" width="200" height="288" rx="16" className="fill-berry-wash" />
+      <svg viewBox="0 0 480 176" className="hidden w-full md:block" aria-hidden>
+        <rect x="16" y="8" width="200" height="160" rx="16" className="fill-blue-wash" />
+        <rect x="264" y="8" width="200" height="160" rx="16" className="fill-berry-wash" />
 
-        <text x="116" y="56" textAnchor="middle" className="fill-brand font-display text-[20px] font-bold">
+        <text x="116" y="42" textAnchor="middle" className="fill-brand font-display text-[18px] font-bold">
           {left.title}
         </text>
         {left.items.map((item, i) => (
-          <text key={item} x="116" y={96 + i * 32} textAnchor="middle" className="fill-ink text-[14px]">
+          <text key={item} x="116" y={76 + i * 28} textAnchor="middle" className="fill-ink text-[13px]">
             {item}
           </text>
         ))}
 
-        <text x="364" y="56" textAnchor="middle" className="fill-berry font-display text-[20px] font-bold">
+        <text x="364" y="42" textAnchor="middle" className="fill-berry font-display text-[18px] font-bold">
           {right.title}
         </text>
         {right.items.map((item, i) => (
-          <text key={item} x="364" y={96 + i * 32} textAnchor="middle" className="fill-ink text-[14px]">
+          <text key={item} x="364" y={76 + i * 28} textAnchor="middle" className="fill-ink text-[13px]">
             {item}
           </text>
         ))}
 
-        <circle cx="240" cy="160" r="56" className="fill-brand" stroke="none" />
-        <foreignObject x="184" y="132" width="112" height="56">
+        <circle cx="240" cy="88" r="48" className="fill-brand" stroke="none" />
+        <foreignObject x="192" y="64" width="96" height="48">
           <div className="flex h-full w-full items-center justify-center p-1 text-center">
             <span className="font-display text-xs font-bold leading-tight text-paper">{center}</span>
           </div>

@@ -36,8 +36,8 @@ export function ProductSense() {
       <Section id="how-to-practice" index="02" kicker="Toolkit" title="Six ways to practice it">
         <div className="grid gap-4 sm:grid-cols-2">
           {PRODUCT_SENSE_EXERCISES.map((exercise, i) => (
-            <Reveal key={exercise.title} delay={i * 0.04}>
-              <article className="rounded-2xl border border-rule bg-surface p-5 transition-colors hover:border-brand">
+            <Reveal key={exercise.title} delay={i * 0.04} className="h-full">
+              <article className="flex h-full flex-col rounded-2xl border border-rule bg-surface p-5 transition-colors hover:border-brand">
                 <span className="font-mono text-xs text-muted">{String(i + 1).padStart(2, '0')}</span>
                 <h3 className="mt-1 font-display text-lg font-bold text-ink">{exercise.title}</h3>
                 <p className="mt-2 text-sm text-ink-soft">{exercise.instruction}</p>
