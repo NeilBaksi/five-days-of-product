@@ -16,11 +16,13 @@ const NODE_DOT_R = 9
 const LABEL_W = 210
 const LABEL_H = 104
 
+const MOBILE_WASH = ['bg-blue-wash', 'bg-berry-wash', 'bg-green-wash', 'bg-amber-wash']
+
 /** A central hub with spokes radiating to equally-weighted competencies, one picked out in brand accent. */
 export function CompetencyWheel({ center, spokes, emphasisIndex }: CompetencyWheelProps) {
   return (
     <div>
-      <div className="relative mx-auto w-full max-w-2xl">
+      <div className="relative mx-auto hidden w-full max-w-2xl md:block">
         <svg viewBox={`0 0 ${VB_W} ${VB_H}`} className="mx-auto w-full" aria-hidden>
           {/* Spokes + nodes (drawn first so labels sit on top) */}
           {spokes.map((_, i) => {
@@ -114,6 +116,29 @@ export function CompetencyWheel({ center, spokes, emphasisIndex }: CompetencyWhe
             )
           })}
         </svg>
+      </div>
+
+      {/* Mobile: one card per spoke, emphasis picked out with a brand ring */}
+      <div className="flex flex-col gap-3 md:hidden">
+        <p className="text-center font-mono text-[0.7rem] font-semibold uppercase tracking-widest text-muted">
+          {center}
+        </p>
+        {spokes.map((spoke, i) => {
+          const isEmphasis = i === emphasisIndex
+          return (
+            <div
+              key={i}
+              className={clsx(
+                'rounded-2xl border border-rule/60 p-4',
+                MOBILE_WASH[i % MOBILE_WASH.length],
+                isEmphasis && 'ring-1 ring-brand',
+              )}
+            >
+              <p className={clsx('font-display font-bold', isEmphasis ? 'text-brand' : 'text-ink')}>{spoke.label}</p>
+              {spoke.desc && <p className="mt-1 text-sm leading-snug text-ink-soft">{spoke.desc}</p>}
+            </div>
+          )
+        })}
       </div>
 
       {/* Accessible fallback: real text for screen readers, hidden visually */}

@@ -23,6 +23,13 @@ import {
   MoscowRings,
   ConcretenessLadder,
   RoadmapCycle,
+  StrategicHexagon,
+  LensDiamond,
+  FunnelStages,
+  HorizonBoard,
+  TranslationMap,
+  AbstractConcrete,
+  SquadModel,
 } from '../components/ui'
 
 /** Renders a single Day content block. Maps the ContentBlock union → UI components. */
@@ -139,6 +146,40 @@ export function renderBlock(block: ContentBlock, key: number) {
       return <ConcretenessLadder key={key} tiers={block.tiers} caption={block.caption} />
     case 'roadmapCycle':
       return <RoadmapCycle key={key} steps={block.steps} caption={block.caption} />
+    case 'hexagon':
+      return <StrategicHexagon key={key} axes={block.axes} caption={block.caption} />
+    case 'diamond':
+      return (
+        <LensDiamond
+          key={key}
+          center={block.center}
+          nodes={block.nodes}
+          emphasisIndex={block.emphasisIndex}
+          caption={block.caption}
+        />
+      )
+    case 'funnel':
+      return <FunnelStages key={key} stages={block.stages} caption={block.caption} />
+    case 'horizons':
+      return <HorizonBoard key={key} columns={block.columns} caption={block.caption} />
+    case 'translation':
+      return (
+        <TranslationMap
+          key={key}
+          leftLabel={block.leftLabel}
+          rightLabel={block.rightLabel}
+          pairs={block.pairs}
+          caption={block.caption}
+        />
+      )
+    case 'squadModel':
+      return (
+        <SquadModel key={key} tribe={block.tribe} chapter={block.chapter} guild={block.guild} caption={block.caption} />
+      )
+    case 'shift':
+      return (
+        <AbstractConcrete key={key} left={block.left} right={block.right} center={block.center} caption={block.caption} />
+      )
     default:
       return null
   }

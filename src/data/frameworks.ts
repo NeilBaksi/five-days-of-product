@@ -1,7 +1,8 @@
 import type { Framework, FrameworkTableData } from '../types'
 
-// PLACEHOLDER content — realistic DPM frameworks so the visual system can be
-// reviewed. Real definitions replace these in a later prompt.
+// Framework reference cards for the /frameworks page: one entry per framework
+// taught (or referenced) across the course, each with a short summary, key
+// points, and — where a day page still covers it — a usedOn link back.
 
 export const FRAMEWORKS: Framework[] = [
   {
@@ -10,7 +11,7 @@ export const FRAMEWORKS: Framework[] = [
     abbev: 'JTBD',
     tagline: 'People hire products to make progress.',
     summary:
-      'Placeholder summary. Frame demand around the progress a user is trying to make in a given circumstance, rather than around demographics or features.',
+      'JTBD treats a purchase as an act of hiring: something in the buyer’s situation changed, and this product was pulled in to resolve it. It protects against designing for a persona instead of a problem, and against mistaking a stated preference for the job actually being hired to do.',
     points: [
       'Situation — the context that triggers the job',
       'Motivation — the progress the user seeks',
@@ -50,9 +51,13 @@ export const FRAMEWORKS: Framework[] = [
     abbev: 'RICE',
     tagline: 'Score initiatives by expected value per effort.',
     summary:
-      'Placeholder summary. Rank a backlog by Reach × Impact × Confidence ÷ Effort to make trade-offs explicit and defensible.',
-    points: ['Reach', 'Impact', 'Confidence', 'Effort'],
-    usedOn: ['/day/2', '/day/4'],
+      'Score competing initiatives by Reach × Impact × Confidence ÷ Effort, then rank the backlog by the result. The inputs are still estimates, not facts, but forcing every argument for an idea onto the same four axes stops prioritisation being won by whoever pitches loudest or shouts last.',
+    points: [
+      'Reach — how many people or events it touches in a given period',
+      'Impact — how much it moves the needle for each one it reaches',
+      'Confidence — how sure the estimate is, expressed as a percentage',
+      'Effort — how many person-months it costs to ship',
+    ],
   },
   {
     id: 'mvp',
@@ -66,6 +71,7 @@ export const FRAMEWORKS: Framework[] = [
       'Measure — real usage, not stated preference',
       'Learn — an assumption validated or killed, cheaply',
     ],
+    usedOn: ['/day/4'],
   },
   {
     id: 'kano',
@@ -73,9 +79,13 @@ export const FRAMEWORKS: Framework[] = [
     abbev: 'Kano',
     tagline: 'Not all features satisfy equally.',
     summary:
-      'Placeholder summary. Classify features as basic, performance, or delight to shape a balanced roadmap.',
-    points: ['Basic (expected)', 'Performance (linear)', 'Delight (exciters)'],
-    usedOn: ['/day/3'],
+      "Classifies features by the kind of satisfaction they produce — must-be, performance, or delighter — not simply whether they're wanted. The category most roadmaps mishandle is the delighter: what wows users today quietly decays into a must-be over time, so yesterday's differentiator becomes today's bare minimum.",
+    points: [
+      'Basic — expected by default; skip it and users notice immediately',
+      "Performance — satisfaction rises in a straight line with how well it's done",
+      'Delighter — a surprise today, a must-be tomorrow if it lands',
+    ],
+    usedOn: ['/day/2'],
   },
   {
     id: 'double-diamond',
@@ -83,9 +93,13 @@ export const FRAMEWORKS: Framework[] = [
     abbev: null as unknown as string,
     tagline: 'Diverge then converge, twice.',
     summary:
-      'Placeholder summary. A discovery-and-delivery model: Discover → Define → Develop → Deliver.',
-    points: ['Discover', 'Define', 'Develop', 'Deliver'],
-    usedOn: ['/day/1', '/day/3'],
+      "Two diamonds, each a diverge-then-converge cycle: Discover and Define explore then narrow the right problem, Develop and Deliver explore then narrow the right solution. The shape is the point — a visible reminder that both problem and solution deserve to be opened up wide before either gets locked down.",
+    points: [
+      'Discover — diverge to explore the problem space widely',
+      'Define — converge on the specific problem worth solving',
+      'Develop — diverge to explore a range of solutions',
+      'Deliver — converge on the one solution that ships',
+    ],
   },
   {
     id: 'north-star',
@@ -93,9 +107,12 @@ export const FRAMEWORKS: Framework[] = [
     abbev: 'NSM',
     tagline: 'One metric that captures core value delivered.',
     summary:
-      'Placeholder summary. Align the team behind a single leading metric and the input levers that move it.',
-    points: ['North Star metric', 'Input metrics', 'Work → inputs → outcome'],
-    usedOn: ['/day/5'],
+      "One number sits at the top, chosen because it best represents the value a product actually creates for the people using it, fed by a small set of input metrics a team can move day to day. The real job isn't the metric itself — it's getting every function pointed at the same definition of progress, instead of each optimising its own.",
+    points: [
+      'North Star metric — the single number that best represents value delivered',
+      'Input metrics — the smaller, directly-actionable levers that move it',
+      "Work → inputs → outcome — every team's effort traces a line to the top metric",
+    ],
   },
   {
     id: 'aarrr',
@@ -103,9 +120,14 @@ export const FRAMEWORKS: Framework[] = [
     abbev: 'AARRR',
     tagline: 'The pirate metrics funnel.',
     summary:
-      'Placeholder summary. Track the lifecycle: Acquisition, Activation, Retention, Referral, Revenue.',
-    points: ['Acquisition', 'Activation', 'Retention', 'Referral', 'Revenue'],
-    usedOn: ['/day/5'],
+      'Five funnel stages tracked as one cadence: Acquisition brings someone in, Activation gets them to real value fast, Retention keeps them returning, Referral turns them into a channel, Revenue is where it pays for itself. Its real use is diagnostic — fixating on acquisition while retention quietly leaks is how a product stays busy without ever actually growing.',
+    points: [
+      'Acquisition — how someone first finds the product',
+      'Activation — the first moment they experience real value',
+      'Retention — whether they come back without being chased',
+      'Referral — whether they bring others along with them',
+      'Revenue — where the funnel starts paying for itself',
+    ],
   },
 ]
 

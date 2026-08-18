@@ -121,6 +121,35 @@ export type ContentBlock =
   | { type: 'moscow'; rings: { label: string; effort: string }[]; caption?: string }
   | { type: 'ladder'; tiers: { label: string; meta: string; desc?: string }[]; caption?: string }
   | { type: 'roadmapCycle'; steps: { label: string; note?: string }[]; caption?: string }
+  | {
+      type: 'hexagon'
+      axes: { name: string; poles: { label: string; example: string; desc: string }[] }[]
+      caption?: string
+    }
+  | { type: 'diamond'; center: string; nodes: { label: string; desc?: string }[]; emphasisIndex?: number; caption?: string }
+  | { type: 'funnel'; stages: { label: string; note: string }[]; caption?: string }
+  | { type: 'horizons'; columns: { label: string; note: string; cards: string[] }[]; caption?: string }
+  | {
+      type: 'translation'
+      leftLabel: string
+      rightLabel: string
+      pairs: { left: string; right: string; note?: string }[]
+      caption?: string
+    }
+  | {
+      type: 'squadModel'
+      tribe: { name: string; squads: { name: string; mission: string }[] }
+      chapter: { name: string; desc: string }
+      guild: { name: string; desc: string }
+      caption?: string
+    }
+  | {
+      type: 'shift'
+      left: { title: string; items: string[] }
+      right: { title: string; items: string[] }
+      center: string
+      caption?: string
+    }
 
 export interface DaySection {
   id: string

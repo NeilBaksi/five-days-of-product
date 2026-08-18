@@ -183,6 +183,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     category: 'Engineering & Technical',
     definition:
       "The accumulated cost of code that’s messy, poorly designed, or hastily built. It’s not necessarily wrong — it just slows down every future change until someone addresses it.",
+    seeAlso: { to: '/day/4', label: 'Day 4' },
   },
   {
     term: 'Unit Testing',
@@ -446,7 +447,6 @@ export const GLOSSARY: GlossaryTerm[] = [
     category: 'Data & Metrics',
     definition:
       "The single metric a team treats as the clearest proxy for the value it delivers to customers — the one number that, if it moves in the right direction, means real things are going well.",
-    seeAlso: { to: '/day/4', label: 'Day 4' },
   },
   {
     term: 'OKR (Objectives & Key Results)',
