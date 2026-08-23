@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { PageHeader, Section, Reveal, PrevNextPager } from '../components/layout'
-import { GLOSSARY, GLOSSARY_CATEGORIES } from '../data/glossary'
+import { AttributionFooter } from '../components/ui'
+import { GLOSSARY, GLOSSARY_CATEGORIES, GLOSSARY_SOURCES } from '../data/glossary'
 import { pager } from '../lib/pager'
 import type { GlossaryCategory } from '../types'
 
@@ -88,7 +89,7 @@ export function Glossary() {
         Showing {shownCount} of {GLOSSARY.length} terms{active !== 'All' ? ` in ${active}` : ''}
       </p>
 
-      <Section id="glossary" title="Terms">
+      <Section id="glossary" index="01" kicker="By category" title="Every term, defined once">
         {visibleCategories.map((category) => {
           const style = CATEGORY_STYLE[category]
           const terms = GLOSSARY.filter((t) => t.category === category)
@@ -117,6 +118,8 @@ export function Glossary() {
           )
         })}
       </Section>
+
+      <AttributionFooter sources={GLOSSARY_SOURCES} />
 
       <PrevNextPager prev={prev} next={next} />
     </>

@@ -1,5 +1,12 @@
 import type { GlossaryCategory, GlossaryTerm } from '../types'
 
+export const GLOSSARY_SOURCES: { label: string; url: string }[] = [
+  { label: 'Noriaki Kano et al., “Attractive Quality and Must-Be Quality” (Quality, Journal of the Japanese Society for Quality Control, 1984)', url: 'https://en.wikipedia.org/wiki/Kano_model' },
+  { label: 'Dai Clegg, MoSCoW prioritisation method (1994)', url: 'https://en.wikipedia.org/wiki/MoSCoW_method' },
+  { label: 'UK Design Council, The Double Diamond (2005)', url: 'https://www.designcouncil.org.uk/resources/the-double-diamond/' },
+  { label: 'Dave McClure, “Startup Metrics for Pirates: AARRR!” (2007)', url: 'https://www.productplan.com/glossary/aarrr-framework' },
+]
+
 export const GLOSSARY_CATEGORIES: GlossaryCategory[] = [
   'Engineering & Technical',
   'Design & UX',
@@ -212,6 +219,13 @@ export const GLOSSARY: GlossaryTerm[] = [
       'A shared library of reusable components, patterns, and rules (colour, type, spacing) that keeps a product visually and functionally consistent as many people build it.',
   },
   {
+    term: 'Double Diamond',
+    category: 'Design & UX',
+    definition:
+      'A design-process model of two diverge-then-converge phases — Discover and Define, then Develop and Deliver — moving from a broad problem space to a specific, tested solution.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
+  },
+  {
     term: 'Empathy Map',
     category: 'Design & UX',
     definition:
@@ -222,6 +236,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     category: 'Design & UX',
     definition:
       'How close a design artifact is to the finished product. Low fidelity (a wireframe) is rough and fast; high fidelity (a polished mockup or prototype) looks, and often behaves, like the real thing.',
+    seeAlso: { to: '/day/3', label: 'Day 3' },
   },
   {
     term: 'Heuristic Evaluation',
@@ -234,6 +249,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     category: 'Design & UX',
     definition:
       "How content and features are structured and labelled so users can actually find what they need — the skeleton a wireframe sits on top of.",
+    seeAlso: { to: '/day/3', label: 'Day 3' },
   },
   {
     term: 'Mockups',
@@ -251,6 +267,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     category: 'Design & UX',
     definition:
       'An interactive, testable stand-in for a real product, used to validate ideas with real users before committing engineering time to the finished version.',
+    seeAlso: { to: '/day/3', label: 'Day 3' },
   },
   {
     term: 'Stakeholder Interviews',
@@ -279,6 +296,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     category: 'Design & UX',
     definition:
       'The overall quality of a person’s experience using a product: how easy, useful, and satisfying it is, not just how it looks.',
+    seeAlso: { to: '/day/3', label: 'Day 3' },
   },
   {
     term: 'Wireframe',
@@ -301,6 +319,13 @@ export const GLOSSARY: GlossaryTerm[] = [
       "The full, ranked list of everything a team could work on next — deliberately more than will actually get built, so there’s always a prioritised queue to pull from.",
   },
   {
+    term: 'Backlog Refinement',
+    category: 'Process & Agile',
+    definition:
+      'A recurring session where a team clarifies, estimates, and reorders upcoming backlog items, so whatever arrives at sprint planning is actually ready to be picked up.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
+  },
+  {
     term: 'Definition of Done',
     category: 'Process & Agile',
     definition:
@@ -316,6 +341,13 @@ export const GLOSSARY: GlossaryTerm[] = [
     category: 'Process & Agile',
     definition:
       'A visual, continuous-flow way of managing work as it moves through stages (like To Do → In Progress → Done), without the fixed time-boxes of Scrum.',
+  },
+  {
+    term: 'MoSCoW',
+    category: 'Process & Agile',
+    definition:
+      'A prioritisation method that sorts requirements into Must have, Should have, Could have, and Won’t have (this time), forcing an honest line between essential and merely desirable.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
   },
   {
     term: 'Retrospective',
@@ -335,13 +367,63 @@ export const GLOSSARY: GlossaryTerm[] = [
     definition: 'A fixed, short time period — commonly one to two weeks — during which a team commits to completing a defined set of work.',
   },
   {
+    term: 'Story Mapping',
+    category: 'Process & Agile',
+    definition:
+      'A technique that arranges user stories along a horizontal backbone of user activities, then stacks supporting detail beneath each one — turning a flat backlog into a visual narrative of the whole product.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
+  },
+  {
     term: 'User Story',
     category: 'Process & Agile',
     definition:
       'A short description of a feature from the user’s point of view, typically written as “As a [user], I want [goal], so that [reason].”',
+    seeAlso: { to: '/day/3', label: 'Day 3' },
+  },
+  {
+    term: 'Velocity',
+    category: 'Process & Agile',
+    definition:
+      'The average amount of work — usually measured in story points — a team completes per sprint, used to forecast how much work will realistically fit in a future one.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
+  },
+  {
+    term: 'Vertical Slice',
+    category: 'Process & Agile',
+    definition:
+      'A thin end-to-end piece of a feature that touches every layer of the system — front end through to data — built to prove the whole path works before adding breadth.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
+  },
+  {
+    term: 'Walking Skeleton',
+    category: 'Process & Agile',
+    definition:
+      'The smallest possible implementation that connects every major architectural piece of a system, even if each piece does almost nothing yet — proof the parts can talk to each other before real functionality is added.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
+  },
+  {
+    term: 'WIP Limit (Work in Progress Limit)',
+    category: 'Process & Agile',
+    definition:
+      'A cap on how many items a team allows into a given stage of work at once, forcing finishing over starting and surfacing bottlenecks as soon as they appear.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
+  },
+  {
+    term: 'Working Backwards',
+    category: 'Process & Agile',
+    definition:
+      'A planning method that starts by writing the future press release or FAQ for a finished product, then works backward to what has to be true to get there.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
   },
 
   // Data & Metrics
+  {
+    term: 'AARRR / Pirate Metrics',
+    category: 'Data & Metrics',
+    definition:
+      'A funnel framework — Acquisition, Activation, Retention, Referral, Revenue — that maps a user’s journey to the metric that matters most at each stage.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
+  },
   {
     term: 'A/B Test',
     category: 'Data & Metrics',
@@ -365,6 +447,13 @@ export const GLOSSARY: GlossaryTerm[] = [
     category: 'Data & Metrics',
     definition:
       'Total revenue divided by the number of active users over a given period — a rough measure of how much value each user generates, on average.',
+  },
+  {
+    term: 'ARR (Annual Recurring Revenue)',
+    category: 'Data & Metrics',
+    definition:
+      'MRR expressed on an annual basis — the recurring revenue a subscription business could expect to collect over a full year at its current run rate.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
   },
   {
     term: 'CAC (Customer Acquisition Cost)',
@@ -437,6 +526,13 @@ export const GLOSSARY: GlossaryTerm[] = [
       'The total revenue a business can expect from one customer over the entire time they stay a customer — usually compared directly against CAC to judge whether growth is actually profitable.',
   },
   {
+    term: 'MRR (Monthly Recurring Revenue)',
+    category: 'Data & Metrics',
+    definition:
+      'The predictable subscription revenue a business collects each month, normalised so annual or multi-month plans are counted at their monthly-equivalent value.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
+  },
+  {
     term: 'NDR (Net Dollar Retention)',
     category: 'Data & Metrics',
     definition:
@@ -480,21 +576,64 @@ export const GLOSSARY: GlossaryTerm[] = [
 
   // Product & Growth
   {
+    term: 'Freemium',
+    category: 'Product & Growth',
+    definition:
+      'A pricing model offering a genuinely usable free tier, with payment required only to unlock additional capability, capacity, or scale.',
+    seeAlso: { to: '/toolkit/pricing', label: 'Pricing Models' },
+  },
+  {
     term: 'Go-To-Market (GTM)',
     category: 'Product & Growth',
     definition:
       'The plan for how a product actually reaches its customers at launch: positioning, pricing, channels, and the sequence of activities that gets it in front of the right people.',
   },
   {
+    term: 'ICE Score',
+    category: 'Product & Growth',
+    definition:
+      'A lightweight prioritisation formula — Impact × Confidence × Ease — used to rank ideas quickly when a fuller framework like RICE would be overkill.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
+  },
+  {
+    term: 'JTBD (Jobs-to-Be-Done)',
+    category: 'Product & Growth',
+    definition:
+      'A framework that reframes a purchase as “hiring” a product to do a specific job, rather than buying a feature list — the underlying job stays stable even as the solutions to it change.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
+  },
+  {
+    term: 'Kano Model',
+    category: 'Product & Growth',
+    definition:
+      'A method for classifying features by the kind of satisfaction they produce — must-be, performance, or attractive — so a roadmap doesn’t treat every feature as equally valuable.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
+  },
+  {
     term: 'MVP (Minimum Viable Product)',
     category: 'Product & Growth',
     definition: 'The smallest version of a product that still delivers enough value to real users to generate genuine feedback and learning.',
+    seeAlso: { to: '/day/4', label: 'Day 4' },
   },
   {
     term: 'NPS (Net Promoter Score)',
     category: 'Product & Growth',
     definition:
       'A loyalty metric based on asking customers how likely they are to recommend a product, on a 0–10 scale, used as a rough proxy for satisfaction.',
+  },
+  {
+    term: 'Opportunity Solution Tree',
+    category: 'Product & Growth',
+    definition:
+      'A visual mapping tool that connects a desired outcome to the opportunities (user needs and pain points) beneath it, and the candidate solutions beneath those — keeping discovery traceable back to the goal.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
+  },
+  {
+    term: 'Positioning',
+    category: 'Product & Growth',
+    definition:
+      'The deliberate claim a product makes on a specific place in a customer’s mind relative to alternatives — what it’s for, and who it’s for, stated clearly enough to be memorable.',
+    seeAlso: { to: '/frameworks', label: 'Frameworks' },
   },
   {
     term: 'Product Lifecycle',

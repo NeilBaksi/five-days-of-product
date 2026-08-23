@@ -66,21 +66,21 @@ export const DEBATE: DebateContent = {
     attribution: 'Martin Eriksson, quoted in Julia Austin, Harvard Business Review',
   },
   resolution:
-    'Both are right, depending on what you emphasize. PMs carry CEO-level accountability for the outcome, but none of the CEO’s authority over the people delivering it. Marty Cagan resolves this by comparing the PM to a CEO with the explicit caveat: unlike the CEO, nobody reports to the product manager. Influence without authority is the job.',
+    'Both are right, depending on what you emphasise. PMs carry CEO-level accountability for the outcome, but none of the CEO’s authority over the people delivering it. Marty Cagan resolves this by comparing the PM to a CEO with the explicit caveat: unlike the CEO, nobody reports to the product manager. Influence without authority is the job.',
 }
 
 export const PM_PHILOSOPHIES: PMPhilosophy[] = [
   {
     title: 'PM drives engineering',
-    body: 'A "throw it over the wall" model: PMs write requirements, engineering builds them. Good for focus, bad for empathy — engineers lose sight of the big picture and do not develop empathy for customers.',
+    body: 'A “throw it over the wall” model: PMs write requirements, engineering builds them. Good for focus, bad for empathy — engineers lose sight of the big picture and do not develop empathy for customers.',
   },
   {
     title: 'Engineering drives product',
-    body: 'Common in deeply technical domains (cloud, big data, infrastructure); engineers push the technology forward and PMs find ways to monetize or productize it. Good for breakthrough innovation, bad because PM input on priorities is ignored.',
+    body: 'Common in deeply technical domains (cloud, big data, infrastructure); engineers push the technology forward and PMs find ways to monetise or productise it. Good for breakthrough innovation, bad because PM input on priorities is ignored.',
   },
   {
     title: 'The PM–engineering partnership',
-    body: 'A "strong yin-yang," joint discovery, shared accountability, engineers in customer interviews, PMs in sprint planning. Produces the best long-term outcomes, even if it feels slower in the short term.',
+    body: 'A “strong yin-yang,” joint discovery, shared accountability, engineers in customer interviews, PMs in sprint planning. Produces the best long-term outcomes, even if it feels slower in the short term.',
   },
 ]
 
@@ -91,7 +91,7 @@ export const COMPETENCIES: string[] = [
   'Resource allocation',
   'Market assessment',
   'Translating business ↔ technical requirements',
-  'Pricing & revenue modeling',
+  'Pricing & revenue modelling',
   'Defining & tracking success metrics',
 ]
 
@@ -102,7 +102,7 @@ export const EQ_TRAITS: EQTrait[] = [
   },
   {
     title: 'Self-awareness',
-    body: 'Avoiding "false-positive feature validation," where a PM falls in love with a feature that solves their own pain point and unconsciously steers users toward agreeing with them.',
+    body: 'Avoiding “false-positive feature validation,” where a PM falls in love with a feature that solves their own pain point and unconsciously steers users toward agreeing with them.',
   },
   {
     title: 'Self-management',

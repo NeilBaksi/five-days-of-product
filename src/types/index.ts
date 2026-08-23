@@ -32,16 +32,26 @@ export interface FrameworkTableData {
   emphasisKey?: string
 }
 
+export type FrameworkCategory =
+  | 'Discovery' | 'Definition' | 'Design' | 'Delivery' | 'Growth' | 'Strategy & Org'
+
 export interface Framework {
   id: string
   name: string
   abbev?: string
+  category: FrameworkCategory
   tagline: string
   summary: string
   /** short bullet points describing the steps/dimensions */
   points: string[]
   /** which day(s) reference it, for cross-linking */
   usedOn?: string[]
+  /** who created it and when — every card must have one */
+  origin?: string
+  /** the honest limitation — every card must have one */
+  whenNotToUse?: string
+  /** longer-form explanation, rendered inside an Accordion via renderBlock */
+  detail?: ContentBlock[]
 }
 
 /** One named product person behind a well-known product (Cagan, SVPG 2016). */

@@ -78,7 +78,7 @@ export function Landing() {
         index="02"
         kicker="Stakes"
         title="Why it matters"
-        intro="Behind almost every product you use daily, someone — usually invisible, rarely a household name — decided what to build, said no to good ideas in favor of the right ones, and dragged a good idea through a company that had every reason to resist it."
+        intro="Behind almost every product you use daily, someone — usually invisible, rarely a household name — decided what to build, said no to good ideas in favour of the right ones, and dragged a good idea through a company that had every reason to resist it."
       >
         <div className="flex flex-col gap-10">
           <PullQuote
@@ -99,7 +99,7 @@ export function Landing() {
         <div className="flex flex-col gap-8">
           <Accordion items={PM_PHILOSOPHIES} />
           <p className="prose-body">
-            The center of gravity in the industry has moved firmly toward the PM–engineering
+            The centre of gravity in the industry has moved firmly toward the PM–engineering
             partnership over the last decade — product, design, and engineering as equal partners
             rather than a request-and-delivery chain. Alongside that: a shift from shipping features
             to owning outcomes, and from tribal-knowledge gut-feel to a real, teachable competency
@@ -113,7 +113,7 @@ export function Landing() {
         index="04"
         kicker="The job, up close"
         title="What it actually takes"
-        intro="Great PMs need three things at once: core competencies, emotional intelligence, and company fit. Missing any one of the three usually shows up as a specific, recognizable failure pattern."
+        intro="Great PMs need three things at once: core competencies, emotional intelligence, and company fit. Missing any one of the three usually shows up as a specific, recognisable failure pattern."
       >
         <CompetencyColumns
           competencies={COMPETENCIES}
