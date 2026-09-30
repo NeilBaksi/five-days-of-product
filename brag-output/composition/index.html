@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Five Days of Product — Brag</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400&family=Mulish:wght@400;500;600;700&display=swap"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #f8f9fb;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #f8f9fb;
+        font-family: Mulish, system-ui, sans-serif;
+        color: #2b2f36;
+      }
+      .clip {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .display {
+        font-family: Philosopher, Georgia, serif;
+      }
+
+      /* ---------- Scene 1: Hook ---------- */
+      #scene-hook .stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        text-align: center;
+        max-width: 1400px;
+      }
+      #hook-title {
+        font-size: 128px;
+        font-weight: 700;
+        color: #0a3d7a;
+        letter-spacing: -0.01em;
+      }
+      #hook-subtitle {
+        font-size: 42px;
+        font-weight: 500;
+        color: #545963;
+      }
+
+      /* ---------- Scene 2: Value Quadrant ---------- */
+      #scene-quadrant {
+        flex-direction: column;
+        gap: 56px;
+      }
+      #quadrant-heading {
+        font-size: 56px;
+        font-weight: 700;
+        color: #0a3d7a;
+      }
+      .quad-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        width: 1600px;
+      }
+      .quad-card {
+        background: #fdfdff;
+        border: 2px solid #e4e7ec;
+        border-radius: 16px;
+        padding: 40px 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        opacity: 0;
+      }
+      .quad-card .label {
+        font-family: Philosopher, Georgia, serif;
+        font-size: 40px;
+        font-weight: 700;
+        color: #9e0b45;
+      }
+      .quad-card .desc {
+        font-size: 24px;
+        color: #545963;
+        line-height: 1.35;
+      }
+
+      /* ---------- Scene 3: Toolkit nav ---------- */
+      #scene-nav {
+        flex-direction: column;
+        gap: 40px;
+      }
+      #nav-heading {
+        font-size: 56px;
+        font-weight: 700;
+        color: #0a3d7a;
+      }
+      .nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 900px;
+      }
+      .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 24px 32px;
+        border-radius: 12px;
+        border: 2px solid #e4e7ec;
+        background: #fdfdff;
+        font-size: 34px;
+        font-weight: 600;
+        color: #2b2f36;
+      }
+      .nav-item .index {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 24px;
+        color: #7a7f88;
+        width: 40px;
+      }
+
+      /* ---------- Scene 4: Debate ---------- */
+      #scene-debate {
+        flex-direction: column;
+        gap: 40px;
+      }
+      .debate-row {
+        display: flex;
+        gap: 40px;
+        width: 1680px;
+      }
+      .debate-panel {
+        flex: 1;
+        border-radius: 16px;
+        padding: 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .debate-panel.left {
+        background: #f9e9ef;
+      }
+      .debate-panel.right {
+        background: #eaf0f8;
+      }
+      .debate-panel .quote {
+        font-family: Philosopher, Georgia, serif;
+        font-size: 32px;
+        font-style: italic;
+        line-height: 1.4;
+        color: #2b2f36;
+      }
+      .debate-panel .attribution {
+        font-size: 22px;
+        color: #545963;
+        font-weight: 600;
+      }
+      #debate-resolution {
+        font-family: Philosopher, Georgia, serif;
+        font-size: 64px;
+        font-weight: 700;
+        color: #0a3d7a;
+        text-align: center;
+        max-width: 1500px;
+        opacity: 0;
+      }
+
+      /* ---------- Scene 5: Outro ---------- */
+      #scene-outro .stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+      #outro-title {
+        font-size: 52px;
+        font-weight: 700;
+        color: #0a3d7a;
+      }
+      #outro-url {
+        font-size: 26px;
+        color: #7a7f88;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-width="1920" data-height="1080" data-duration="19">
+      <!-- Scene 1: Hook — 0s to 4s -->
+      <section id="scene-hook" class="clip" data-start="0" data-duration="4" data-track-index="0">
+        <div class="stack">
+          <h1 id="hook-title" class="display">Five Days of Product</h1>
+          <p id="hook-subtitle">Everything a PM actually does. In five days.</p>
+        </div>
+      </section>
+
+      <!-- Scene 2: Value Quadrant — 4s to 9s -->
+      <section id="scene-quadrant" class="clip" data-start="4" data-duration="5" data-track-index="0">
+        <h2 id="quadrant-heading" class="display">What makes a product work</h2>
+        <div class="quad-grid">
+          <div class="quad-card" id="quad-1">
+            <div class="label">Valuable</div>
+            <div class="desc">Customers choose to use or buy it.</div>
+          </div>
+          <div class="quad-card" id="quad-2">
+            <div class="label">Usable</div>
+            <div class="desc">Customers can figure out how to use it.</div>
+          </div>
+          <div class="quad-card" id="quad-3">
+            <div class="label">Feasible</div>
+            <div class="desc">Engineering can build it with the time and tech available.</div>
+          </div>
+          <div class="quad-card" id="quad-4">
+            <div class="label">Viable</div>
+            <div class="desc">The solution works for the business.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scene 3: Toolkit nav — 9s to 13s -->
+      <section id="scene-nav" class="clip" data-start="9" data-duration="4" data-track-index="0">
+        <h2 id="nav-heading" class="display">A full toolkit, not just slides</h2>
+        <div class="nav-list">
+          <div class="nav-item" id="nav-1"><span class="index">G</span><span>Glossary</span></div>
+          <div class="nav-item" id="nav-2"><span class="index">T</span><span>Templates</span></div>
+          <div class="nav-item" id="nav-3"><span class="index">P</span><span>Prompt Library</span></div>
+          <div class="nav-item" id="nav-4"><span class="index">$</span><span>Pricing Models</span></div>
+        </div>
+      </section>
+
+      <!-- Scene 4: Debate — 13s to 17.5s -->
+      <section id="scene-debate" class="clip" data-start="13" data-duration="4.5" data-track-index="0">
+        <div class="debate-row" id="debate-row">
+          <div class="debate-panel left">
+            <div class="quote">"A good product manager is the CEO of the product."</div>
+            <div class="attribution">— Ben Horowitz, a16z</div>
+          </div>
+          <div class="debate-panel right">
+            <div class="quote">"PMs are not the CEO of product… they simply don't have any direct authority."</div>
+            <div class="attribution">— Martin Eriksson</div>
+          </div>
+        </div>
+        <h2 id="debate-resolution" class="display">Influence without authority is the job.</h2>
+      </section>
+
+      <!-- Scene 5: Outro — 17.5s to 19s -->
+      <section id="scene-outro" class="clip" data-start="17.5" data-duration="1.5" data-track-index="0">
+        <div class="stack">
+          <div id="outro-title" class="display">Five Days of Product</div>
+          <div id="outro-url">neilbaksi.github.io/five-days-of-product</div>
+        </div>
+      </section>
+
+      <!-- Audio: music bed, low restrained volume, swell into debate resolution, fade on outro -->
+      <audio
+        id="bg-music"
+        src="assets/music/happy-beats-business-moves-vol-12-by-ende-dot-app.mp3"
+        data-start="0"
+        data-duration="19"
+        data-track-index="10"
+        data-volume="0.15"
+        data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0.15},{"t":13,"v":0.15},{"t":13.6,"v":0.22},{"t":17.5,"v":0.22},{"t":19,"v":0}]}]}'
+      ></audio>
+
+      <!-- SFX: quadrant card arrivals -->
+      <audio id="sfx-quad-1" src="assets/sfx/interface/drop_001.ogg" data-start="4.3" data-duration="0.11" data-track-index="11" data-volume="0.6"></audio>
+      <audio id="sfx-quad-2" src="assets/sfx/interface/drop_001.ogg" data-start="4.65" data-duration="0.11" data-track-index="12" data-volume="0.6"></audio>
+      <audio id="sfx-quad-3" src="assets/sfx/interface/drop_001.ogg" data-start="5.0" data-duration="0.11" data-track-index="13" data-volume="0.6"></audio>
+      <audio id="sfx-quad-4" src="assets/sfx/interface/drop_001.ogg" data-start="5.35" data-duration="0.11" data-track-index="14" data-volume="0.6"></audio>
+
+      <!-- SFX: nav item ticks -->
+      <audio id="sfx-nav-1" src="assets/sfx/interface/click_001.ogg" data-start="9.4" data-duration="0.10" data-track-index="15" data-volume="0.5"></audio>
+      <audio id="sfx-nav-2" src="assets/sfx/interface/click_001.ogg" data-start="10.15" data-duration="0.10" data-track-index="16" data-volume="0.5"></audio>
+      <audio id="sfx-nav-3" src="assets/sfx/interface/click_001.ogg" data-start="10.9" data-duration="0.10" data-track-index="17" data-volume="0.5"></audio>
+      <audio id="sfx-nav-4" src="assets/sfx/interface/click_001.ogg" data-start="11.65" data-duration="0.10" data-track-index="18" data-volume="0.5"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Scene 1: Hook (0-4s)
+      tl.fromTo("#hook-title", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.1)
+        .fromTo("#hook-subtitle", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.7);
+
+      // Scene 2: Value Quadrant (4-9s), cards stagger in one by one
+      tl.fromTo("#quadrant-heading", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 4.2)
+        .fromTo("#quad-1", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 4.3)
+        .fromTo("#quad-2", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 4.65)
+        .fromTo("#quad-3", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 5.0)
+        .fromTo("#quad-4", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 5.35);
+
+      // Scene 3: Toolkit nav (9-13s), items highlight in sequence
+      tl.fromTo("#nav-heading", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 9.1)
+        .fromTo("#nav-1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35, ease: "power2.out" }, 9.4)
+        .to("#nav-1", { backgroundColor: "#f9e9ef", borderColor: "#9e0b45", duration: 0.2 }, 9.4)
+        .to("#nav-1", { backgroundColor: "#fdfdff", borderColor: "#e4e7ec", duration: 0.3 }, 9.9)
+        .fromTo("#nav-2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35, ease: "power2.out" }, 10.15)
+        .to("#nav-2", { backgroundColor: "#f9e9ef", borderColor: "#9e0b45", duration: 0.2 }, 10.15)
+        .to("#nav-2", { backgroundColor: "#fdfdff", borderColor: "#e4e7ec", duration: 0.3 }, 10.65)
+        .fromTo("#nav-3", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35, ease: "power2.out" }, 10.9)
+        .to("#nav-3", { backgroundColor: "#f9e9ef", borderColor: "#9e0b45", duration: 0.2 }, 10.9)
+        .to("#nav-3", { backgroundColor: "#fdfdff", borderColor: "#e4e7ec", duration: 0.3 }, 11.4)
+        .fromTo("#nav-4", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35, ease: "power2.out" }, 11.65)
+        .to("#nav-4", { backgroundColor: "#f9e9ef", borderColor: "#9e0b45", duration: 0.2 }, 11.65)
+        .to("#nav-4", { backgroundColor: "#fdfdff", borderColor: "#e4e7ec", duration: 0.3 }, 12.15);
+
+      // Scene 4: Debate (13-17.5s) — panels present, then resolution line replaces them
+      tl.fromTo("#debate-row", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 13.1)
+        .to("#debate-row", { opacity: 0, y: -16, duration: 0.4, ease: "power2.in" }, 16.0) // beat-locked: 13.11s strong cue anchors the resolution swell that follows
+        .fromTo("#debate-resolution", { opacity: 0, scale: 0.96 }, { opacity: 1, scale: 1, duration: 0.5, ease: "power3.out" }, 16.3);
+
+      // Scene 5: Outro (17.5-19s)
+      tl.fromTo("#outro-title", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" }, 17.6)
+        .fromTo("#outro-url", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" }, 17.9);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
