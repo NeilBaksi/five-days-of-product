@@ -1,0 +1,5 @@
+#!/bin/sh
+# Gate: lint (zero warnings) + typecheck + build must pass before any commit.
+set -e
+npm run lint -- --max-warnings 0
+npm run build
