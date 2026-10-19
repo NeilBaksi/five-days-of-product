@@ -9,7 +9,7 @@ export interface NavItem {
   /** Short mono index shown in the rail, e.g. "00", "F", "01" */
   index: string
   /** Grouping for the sidebar (general, reference toolkit, or course days) */
-  group: 'general' | 'toolkit' | 'day'
+  group: 'general' | 'toolkit' | 'day' | 'caseStudy'
 }
 
 export type CalloutKind = 'info' | 'tip' | 'warning' | 'example'
@@ -69,7 +69,20 @@ export interface StoryItem {
 export type ContentBlock =
   | { type: 'paragraph'; text: string }
   | { type: 'subheading'; text: string }
-  | { type: 'image'; src: string; alt: string; caption?: string }
+  | {
+      type: 'image'
+      src: string
+      alt: string
+      caption?: string
+      /** prose = max-w-xl (default, current behaviour); wide = max-w-4xl; portrait = max-w-sm */
+      size?: 'prose' | 'wide' | 'portrait'
+      /** intrinsic pixel size of the asset, to reserve space (no CLS) */
+      width?: number
+      height?: number
+    }
+  | { type: 'externalLink'; href: string; label: string; note?: string }
+  /** collapsed-by-default disclosure holding any blocks; for depth on demand */
+  | { type: 'expandable'; title: string; blocks: ContentBlock[] }
   | { type: 'cards'; items: { title: string; body: string; icon?: string }[] }
   | { type: 'callout'; kind: CalloutKind; title: string; body: string }
   | { type: 'table'; data: FrameworkTableData }
@@ -172,6 +185,39 @@ export interface DaySection {
 export interface DayMeta {
   label: string // e.g. "Duration"
   value: string // e.g. "~90 min"
+}
+
+/** Points at an entry in FRAMEWORKS (src/data/frameworks.ts) by id. */
+export interface FrameworkRef {
+  /** must equal a Framework.id, e.g. 'rice', 'odi', 'moscow' */
+  id: string
+  /** chip text; defaults to the framework's name */
+  label?: string
+  /** link target; defaults to framework.usedOn[0], else '/frameworks' */
+  to?: string
+}
+
+export interface CaseStudySection extends DaySection {
+  /** frameworks applied in this section, rendered as link chips under the heading */
+  frameworks?: FrameworkRef[]
+}
+
+export interface CaseStudy {
+  /** URL slug: 'aesop-rituals' | 'connflix' */
+  slug: string
+  /** PageHeader kicker, e.g. 'Case study · Individual PRD' */
+  kicker: string
+  title: string
+  subtitle: string
+  /** PageHeader meta row: Format, Role/Team, Course, Date */
+  meta: DayMeta[]
+  /** mandatory honesty note, rendered as <Callout kind="info"> directly under the header */
+  disclosure: { title: string; body: string }
+  sections: CaseStudySection[]
+  /** closing recap, rendered with <KeyTakeaways> */
+  takeaways: string[]
+  /** real, verified secondary sources only; rendered with <AttributionFooter> */
+  sources?: { label: string; url: string }[]
 }
 
 /** In-palette per-day accent for wayfinding (badge + section numerals). */

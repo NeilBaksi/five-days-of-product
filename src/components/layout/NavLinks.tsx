@@ -10,12 +10,13 @@ interface NavLinksProps {
 
 const GROUPS = [
   { group: 'general' as const },
+  { group: 'caseStudy' as const, header: 'Case studies' },
   { group: 'toolkit' as const, header: 'Toolkit' },
   { group: 'day' as const, header: 'Course' },
 ]
 
 /**
- * Renders the NAV array in labelled groups (general, then "TOOLKIT", then
+ * Renders the NAV array in labelled groups (general, "CASE STUDIES", then "TOOLKIT", then
  * "COURSE") as NavLinks with an animated active-state background shared
  * between Sidebar and MobileDrawer via `layoutId`.
  */

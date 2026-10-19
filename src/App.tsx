@@ -3,6 +3,7 @@ import { SidebarLayout, PageTransition } from './components/layout'
 import { Landing } from './pages/Landing'
 import { Frameworks } from './pages/Frameworks'
 import { Day } from './pages/Day'
+import { CaseStudy } from './pages/CaseStudy'
 import { Glossary } from './pages/Glossary'
 import { Templates } from './pages/Templates'
 import { PromptLibrary } from './pages/PromptLibrary'
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/toolkit/product-sense" element={<ProductSense />} />
           <Route path="/toolkit/pricing" element={<PricingModels />} />
           <Route path="/day/:n" element={<Day />} />
+          <Route path="/case-studies/:slug" element={<CaseStudy />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </PageTransition>

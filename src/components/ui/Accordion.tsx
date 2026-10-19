@@ -39,8 +39,7 @@ function AccordionItem({ title, body }: { title: string; body: ReactNode }) {
       </h3>
       <div
         id={panelId}
-        role="region"
-        aria-labelledby={triggerId}
+        inert={!open}
         className="grid transition-[grid-template-rows] duration-300 ease-out-expo"
         style={{ gridTemplateRows: open ? '1fr' : '0fr' }}
       >

@@ -1,3 +1,5 @@
+import { ExternalLink } from 'lucide-react'
+import clsx from 'clsx'
 import type { ContentBlock } from '../types'
 import {
   Card,
@@ -6,6 +8,7 @@ import {
   PullQuote,
   StepList,
   Placeholder,
+  Accordion,
   GoodBadList,
   StoryCards,
   Spectrum,
@@ -49,8 +52,25 @@ export function renderBlock(block: ContentBlock, key: number) {
       )
     case 'image':
       return (
-        <figure key={key} className="mx-auto w-full max-w-xl">
-          <img src={block.src} alt={block.alt} className="w-full h-auto rounded-2xl" />
+        <figure
+          key={key}
+          className={clsx(
+            'mx-auto w-full',
+            block.size === 'wide' ? 'max-w-4xl' : block.size === 'portrait' ? 'max-w-sm' : 'max-w-xl',
+          )}
+        >
+          <img
+            src={block.src}
+            alt={block.alt}
+            width={block.width}
+            height={block.height}
+            loading="lazy"
+            decoding="async"
+            className={clsx(
+              'w-full h-auto rounded-2xl',
+              (block.size === 'wide' || block.size === 'portrait') && 'border border-rule bg-surface',
+            )}
+          />
           {block.caption && <figcaption className="mt-3 text-sm text-muted">{block.caption}</figcaption>}
         </figure>
       )
@@ -79,6 +99,13 @@ export function renderBlock(block: ContentBlock, key: number) {
       return <PullQuote key={key} quote={block.quote} attribution={block.attribution} />
     case 'steps':
       return <StepList key={key} items={block.items} />
+    case 'expandable':
+      return (
+        <Accordion
+          key={key}
+          items={[{ title: block.title, body: <div className="space-y-8 pt-2">{block.blocks.map((b, i) => renderBlock(b, i))}</div> }]}
+        />
+      )
     case 'placeholder':
       return <Placeholder key={key} note={block.note} />
     case 'goodbad':
@@ -179,6 +206,22 @@ export function renderBlock(block: ContentBlock, key: number) {
     case 'shift':
       return (
         <AbstractConcrete key={key} left={block.left} right={block.right} center={block.center} caption={block.caption} />
+      )
+    case 'externalLink':
+      return (
+        <div key={key}>
+          <a
+            href={block.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-[44px] items-center gap-2 font-semibold text-brand underline underline-offset-4 hover:text-brand-dark"
+          >
+            <span>{block.label}</span>
+            <ExternalLink size={16} strokeWidth={1.75} aria-hidden />
+            <span className="sr-only">(opens in a new tab)</span>
+          </a>
+          {block.note && <p className="mt-1 text-sm text-muted">{block.note}</p>}
+        </div>
       )
     default:
       return null

@@ -14,6 +14,8 @@ export const NAV: NavItem[] = [
   { to: '/day/3', label: 'Day 3 · Design & Solution', index: '03', group: 'day' },
   { to: '/day/4', label: 'Day 4 · PMF & Scaling', index: '04', group: 'day' },
   { to: '/day/5', label: 'Day 5 · PM Careers', index: '05', group: 'day' },
+  { to: '/case-studies/aesop-rituals', label: 'Aesop · Homepage PRD', index: 'C1', group: 'caseStudy' },
+  { to: '/case-studies/connflix', label: 'Connflix · Netflix social clubs', index: 'C2', group: 'caseStudy' },
 ]
 
 export const DAY_COUNT = 5
