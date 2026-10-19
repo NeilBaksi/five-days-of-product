@@ -18,6 +18,7 @@ export function SidebarLayout({ children }: SidebarLayoutProps) {
   const openerRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- close the drawer on route change
     setDrawerOpen(false)
     // Reset scroll on navigation (prev/next pager, sidebar links) so each page opens at the top.
     window.scrollTo(0, 0)

@@ -40,7 +40,7 @@ export function CopyButton({ text, label }: CopyButtonProps) {
       <button
         type="button"
         aria-label={label}
-        onClick={handleClick}
+        onClick={() => void handleClick()}
         className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-rule bg-surface px-3 font-mono text-[0.7rem] uppercase tracking-wider text-brand transition-colors hover:bg-blue-wash"
       >
         {status === 'copied' ? (
